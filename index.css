@@ -1,0 +1,13 @@
+div {
+	padding: 10;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+	text-align: center;
+}
+
+#pageTitle {
+	font-weight: bold;
+}
+
