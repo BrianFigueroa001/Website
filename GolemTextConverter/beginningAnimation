@@ -1,0 +1,4 @@
+$(document).ready(function(){
+	$("#mainContent").hide(0);
+	$("#N21").hide(0);
+});

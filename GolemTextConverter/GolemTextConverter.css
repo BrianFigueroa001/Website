@@ -1,4 +1,5 @@
-body {
+body 
+{
 	text-align: center;
 	background-color: white;
 
@@ -8,7 +9,8 @@ body {
 	padding: auto;
 }
 
-input[type=text] {
+input[type=text] 
+{
 	background-color: black;
 	color: #168798;
 	font-family: "Lucida Console";
@@ -19,7 +21,8 @@ input[type=text] {
 	padding: 12px 20px;
 }
 
-input[type=textDisplay] {
+input[type=textDisplay] 
+{
 	background-color: black;
 	color: #168798;
 	font-family: "Lucida Console";
@@ -30,7 +33,8 @@ input[type=textDisplay] {
 	padding: 12px 20px;
 }
 
-#header {
+#header 
+{
 
 	color: #168798;
 	line-height: 200%;
@@ -38,7 +42,8 @@ input[type=textDisplay] {
 
 }
 
-#userInstruction {
+#userInstruction 
+{
 
 	color: #168798;
 	line-height: 150%;
@@ -46,7 +51,8 @@ input[type=textDisplay] {
 }
 
 
-#userOutput{
+#userOutput 
+{
 	margin: auto;
 	background-color: black;
 	color: #168798;
@@ -60,21 +66,31 @@ input[type=textDisplay] {
 
 }
 
-#textBox {
+#textBox
+{
 	color: #168798;
 	font-family: "Lucida Console";
 	font-weight: normal;
 }
 
-#N21 {
+#N21 
+{
+	visibility: visible;
 	position: absolute;
-	left: 50px;
-	top: 200px;
+	left: -130px;
+	top: 75px;
 
 	color: #168798;
 	font-family: "Lucida Console";
 	font-weight: normal;
 	font-size: 20;
+}
+
+#lastCall 
+{
+	position: absolute;
+	left: 500px;
+	bottom: 50;
 }
 
 

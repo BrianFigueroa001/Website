@@ -1,58 +1,66 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="GolemTextConverter.css" media="screen"></link>
-		<script type="text/javascript" src="GolemTextConverter.js"></script>
+
+		<script src = "jquery-3.3.1.min.js"></script>
+		<script src = "startAnimations.js"></script>
+		<script src= "GolemTextConverter.js"></script>
+
 
 		<audio id="helloAudio">
-  		<source src="Hello.wav" type="audio/wav">
+  			<source src="Hello.wav" type="audio/wav">
 		</audio>
 
 		<audio id="beepAudio">
-		<source src="Beep.wav" type="audio/wav">
+			<source src="Beep.wav" type="audio/wav">
 		</audio>
 
-	<title>Golem Text Converter</title>
+		<title>Golem Text Converter</title>
+
 	</head>
 
 	<body>
 
-	<div id="header">
-		Golemization-Text-Converter
-	</div>
-	<div id="userInstruction">
-		COMMENCING-GREETING-PROTOCOL: Hello!<br>
-		STATING-UNIT-DESIGNATION: N-21<br>
-		STATING-PURPOSE-OF-THIS-UNIT:<br>
-		This-unit-will-assist-you-with-conversion-of<br>
-		common-speech-into-accurate-golem-speech.<br><br>
+	<div id = "mainContent">
+		<div id="header">
+			Golemization-Text-Converter
+		</div>
 
-		PLEASE-INSERT-TEXT-FOR-CONVERSION.<br><br><br><br><br>
-	</div>
-	<div>
-		<form>
-			<div>
-			INPUT<br><br>  
-			<input type="text" id="userInput" onKeydown = "javascript: if (event.keyCode==13) handleKeyPress(event);"><br><br>
-			</div>
-		</form>
-	</div>
+		<div id="userInstruction">
+			PLEASE-INSERT-TEXT-FOR-CONVERSION.<br><br><br><br><br>
+		</div>
 
-	OUTPUT<br><br>
-	<div id="userOutput">
+		<div>
+			<form>
+				<div>
+				INPUT<br><br>  
+					<input type="text" id="userInput" onKeydown = "javascript: if (event.keyCode==13) handleKeyPress(event);"><br><br>
+				</div>
+			</form>
+		</div>
+
+
+		OUTPUT<br><br>
+
+		<div id="userOutput">
+		
+		</div>
+
+		<br>
+
+		<div>
+			<input type="button" value="Submit" onclick = "showText()">
+		</div>
+
+		<div id="lastCall">
+			<input type="button" value="Last Input" onclick = "initiatePrev()">
+		</div>
+	</div>
 	
-	</div><br>
-
-	<div>
-		<input type="button" value="Submit" onclick = "showText()">
-	</div>
-
 	<div id="N21">
 		<img id="n21" src="golem_Mascot_NB.png" onclick = "soundHello()"></img>
 	</div>
 
-	<div id="lastCall">
-		<input type="button" value="Last Input" onclick = "initiatePrev()">
-	</div>
 	</body>
 
 </html>

@@ -192,3 +192,8 @@ var textToSpeech = function (o)
     //Speak the output out loud.
 	synth.speak(speaker);
 }
+
+$(document).ready(function(){
+	$("#mainContent").hide();
+	$("#N21").hide();
+});
