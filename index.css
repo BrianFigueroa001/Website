@@ -1,13 +1,39 @@
+body {
+	text-align: center;
+}
+
 div {
 	padding: 10;
 	font-family: "Lucida Console", Monaco, monospace;
 }
 
-body {
-	text-align: center;
+#header {
+	font-weight: bold;
 }
 
-#pageTitle {
-	font-weight: bold;
+#mainInfoSection {
+	position: fixed;
+	top: 20%;
+	right: 30%;
+}
+
+#myPic {
+	position: fixed;
+	left: 0.5%;
+	top: 1%;
+
+	border-style: groove;
+}
+
+#picLabel {
+	position: fixed;
+	top: 45%;
+	left: 7%;	
+}
+
+#cascadedInfoSection {
+	position: fixed;
+	left: 45%;
+	top: 50%;
 }
 

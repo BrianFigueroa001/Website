@@ -23,14 +23,17 @@
 
 	<div id = "mainContent">
 		<div id="header">
-			Golemization-Text-Converter
+			GOLEMIZATION-TEXT-CONVERTER
 		</div>
 
 		<div id="userInstruction">
-			PLEASE-INSERT-TEXT-FOR-CONVERSION.<br><br><br><br><br>
+			INSTRUCTIONS:<br>
+			1) ENTER-TEXT-AT-INPUT-BOX.<br>
+			2) CLICK-ON-ROBOT-OR-PRESS-ENTER-TO-CONVERT<br>
+			3) LISTEN-TO-SPEECH-AND-REJOICE<br><br>
 		</div>
 
-		<div>
+		<div id = "textbox">
 			<form>
 				<div>
 				INPUT<br><br>  
@@ -42,23 +45,18 @@
 
 		OUTPUT<br><br>
 
-		<div id="userOutput">
-		
-		</div>
+		<div id="userOutput"></div>
 
 		<br>
 
-		<div>
-			<input type="button" value="Submit" onclick = "showText()">
+		<div id="lastCall" onclick = "initiatePrev()">
+			REPLAY PREVIOUS INPUT
 		</div>
 
-		<div id="lastCall">
-			<input type="button" value="Last Input" onclick = "initiatePrev()">
-		</div>
 	</div>
 	
 	<div id="N21">
-		<img id="n21" src="golem_Mascot_NB.png" onclick = "soundHello()"></img>
+		<img id="n21" src="golem_Mascot_NB.png" onclick = "initiate()"></img>
 	</div>
 
 	</body>

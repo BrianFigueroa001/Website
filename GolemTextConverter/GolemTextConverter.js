@@ -1,3 +1,10 @@
+$(document).ready(function(){
+	//Start displaying
+	$("#mainContent").delay("fast").fadeIn();
+	$("#N21").delay("slow").fadeIn();
+	$("#N21").animate({left: '10%'});
+});
+
 //Traces previous user inputs
 class Stack
 {
@@ -176,6 +183,8 @@ var soundHello = function()
 	var helloSound = document.getElementById("helloAudio");
 	helloSound.play();
 }
+
+
 
 //Implement WebSpeech API to get text-to-speech functionality
 var textToSpeech = function (o)
