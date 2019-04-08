@@ -1,39 +1,155 @@
 body {
 	text-align: center;
+/*		background-repeat: no-repeat;
+	background-image: url("tempBackground.jpg")*/
+	background-color: gray;
 }
 
 div {
+	max-width: ;
 	padding: 10;
 	font-family: "Lucida Console", Monaco, monospace;
+	color: white;
 }
 
 #header {
 	font-weight: bold;
+	font-size: 40;
 }
 
 #mainInfoSection {
+	text-align: left;
 	position: fixed;
-	top: 20%;
-	right: 30%;
+	top: -5px;
+	right: -5px;
+
+	height: 930px;
+	color: white;
+	border-style: groove;
+	background-color: black;
 }
 
-#myPic {
+/*HIDDEN FOR NOW*/
+#linksSection {
+	visibility: hidden;
 	position: fixed;
-	left: 0.5%;
-	top: 1%;
+
+	color: white;
+	border-style: none;
+	background-color: black;
+	right: 0px;
+	top: 500px;
+}
+
+a {
+	color: blue;
+}
+
+a:visited {
+	color: white;
+}
+
+/*#myPic {
+	position: fixed;
+	left: 3%;
+	top: 7%;
 
 	border-style: groove;
-}
+}*/
 
-#picLabel {
+/*#picLabel {
 	position: fixed;
-	top: 45%;
-	left: 7%;	
+	top: 52%;
+	left: 10%;	
 }
-
+*/
 #cascadedInfoSection {
 	position: fixed;
 	left: 45%;
 	top: 50%;
 }
 
+#historyClickable {
+
+	margin: center;
+
+	position: fixed;
+	right: 285px;
+	top: 480px;
+
+	width: 150px;
+	outline-style: outset;
+	outline-width: thick;
+	background: grey;
+}
+
+#historySection {
+	margin: center;
+
+	text-align: left;
+	position: fixed;
+	top: 560px;
+	left: 1040px;
+
+
+	width:  650px;
+	height: 250px;
+	outline-style: groove;
+	background: black;
+}
+
+#educationClickable {
+	margin: center;
+
+	position: fixed;
+	right: 550px;
+	top: 480px;
+
+	width: 150px;
+	outline-style: outset;
+	outline-width: thick;
+	background: grey;
+}
+
+#educationSection {
+	margin: center;
+
+	text-align: left;
+	position: fixed;
+	top: 560px;
+	left: 1040px;
+
+
+	width:  650px;
+	height: 250px;
+	outline-style: groove;
+	background: black;
+}
+
+#goalsClickable {
+	margin: center;
+
+	position: fixed;
+	right: 20px;
+	top: 480px;
+
+	width: 150px;
+	outline-style: outset;
+	outline-width: thick;
+	background: grey;
+}
+
+#goalsSection {
+	margin: center;
+
+	text-align: left;
+	position: fixed;
+	top: 560px;
+	left: 1040px;
+
+
+	width:  650px;
+	height: 250px;
+	outline-style: groove;
+	background: black;
+}

@@ -1,5 +1,9 @@
 $(document).ready(function(){
-	//Start displaying
+	//Initially hide contents
+	$("#mainContent").hide();
+	$("#N21").hide();
+
+	//Start displaying contents
 	$("#mainContent").delay("fast").fadeIn();
 	$("#N21").delay("slow").fadeIn();
 	$("#N21").animate({left: '10%'});
@@ -201,8 +205,3 @@ var textToSpeech = function (o)
     //Speak the output out loud.
 	synth.speak(speaker);
 }
-
-$(document).ready(function(){
-	$("#mainContent").hide();
-	$("#N21").hide();
-});

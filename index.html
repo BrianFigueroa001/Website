@@ -1,42 +1,55 @@
 <html>
 	<head>
+
 	<link rel="stylesheet" type="text/css" href="index.css" media="screen"></link>
+		
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="index.js"></script>
+
 	<title>Brian's Website</title>
+
 	</head>
 	<body>
-		<div id="header">
-			Welcome to my website!
-		</div>
 
 		<!-- Where my primary information will be placed, left of pic -->
 		<div id="mainInfoSection">
-			Test
+			<div id="header">
+			Welcome to my website!
+			</div><br><br>
+			 Hi there! I'm Brian, a third year student at Florida International university<br>
+			 who is pursuing a bachelor degree in computer science.<br>
+			 I'm planning to graduate on Spring 2021 and become a Software Engineer!<br><br><br>
+
+			 Email: brianfigueroa001@gmail.com<br>
+			 Phone Number: (786) - 399 - 5183<br>
+		</div>
+
+		<!-- Where the links are displayed -->
+		<div id="linksSection">
+			Links<br><br>
+			<a id="gitHubLink" href="https://github.com/brianfigueroa001">My GitHub Page</a>
+			<br><br>
+			<a id= "golemLink" href="GolemTextConverter/GolemTextConverter.html">My Golem Text Converter Website</a>
+		
+
 		</div>
 
 		<!-- My picture with my name underneath it. -->
-		<div id="picSection">
+<!-- 		<div id="picSection">
 			<img id="myPic" src="BrianFigPic.jpg"></img>
 			<text id="picLabel"> Brian Figueroa </text>
 		</div>
-
+ -->
 		<!-- This is where the cascading tabs will go -->
-		<div id="cascadedInfoSection">
-			Testing!
-			<div id="history"></div>
-			<div id="historySection"></div>
+			<div id="historyClickable">Experience</div>
+			<div id="historySection">Hello!</div>
 
-			<div id="education"></div>
-			<div id="educationSection"></div>
+			<div id="educationClickable">Education</div>
+			<div id="educationSection">Hi!</div>
 
-			<div id="goals"></div>
-			<div id="goalsSection"></div>
-		</div>
+			<div id="goalsClickable">Links</div>
+			<div id="goalsSection">Hola!</div>
 
-<!-- 		<div id="golemLink">
-			<a href="GolemTextConverter\GolemTextConverter.html">
-			Golem Chat Converter
-			</a>
-		</div> -->
 
 	</body>
 </html>

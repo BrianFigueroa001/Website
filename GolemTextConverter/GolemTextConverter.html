@@ -21,6 +21,7 @@
 
 	<body>
 
+	<!-- All the elements on the page excluding the robot -->
 	<div id = "mainContent">
 		<div id="header">
 			GOLEMIZATION-TEXT-CONVERTER
@@ -33,6 +34,7 @@
 			3) LISTEN-TO-SPEECH-AND-REJOICE<br><br>
 		</div>
 
+		<!-- This is where the user enters their input -->
 		<div id = "textbox">
 			<form>
 				<div>
@@ -45,16 +47,19 @@
 
 		OUTPUT<br><br>
 
+		<!-- Output displayed here -->
 		<div id="userOutput"></div>
 
 		<br>
 
+		<!-- Button for user to get last input -->
 		<div id="lastCall" onclick = "initiatePrev()">
 			REPLAY PREVIOUS INPUT
 		</div>
 
 	</div>
 	
+	<!-- The robot element that's isolated from every other element -->
 	<div id="N21">
 		<img id="n21" src="golem_Mascot_NB.png" onclick = "initiate()"></img>
 	</div>

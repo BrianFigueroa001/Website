@@ -1,26 +1,89 @@
-// $(document).ready(function() {
-//     //All custom JQuery methods go here
-//     $("div").fadeOut(0); //Clear screen
-//     $("#myPic").fadeOut(0);
+$(document).ready(function() {
+    //All custom JQuery methods go here
+    $("div").hide(); //Clear screen
 
-//     $("#pageTitle").fadeIn("slow", function(){
-//     	$("#pageTitle").animate({left: '35%'});
-//     });
+    //Elements fade in
+    $("#header").delay(300).fadeIn("slow");
+    $("#mainInfoSection").delay(500).fadeIn("slow");
+    $("#linksSection").delay(600).fadeIn("slow");
+    $("#picSection").delay(700).fadeIn("slow");
 
-//     $("#myPic").delay(700).fadeIn("slow", function(){
-//     	$("#myPic").animate({left: '15%'})
-//     })
+    $("#historySection").delay(0).fadeIn(0, function(){
+    	$("#historySection").slideUp(0);
+    });
 
-//     $("#header1").delay(1200).fadeIn("slow", function(){
-//     	$("#header1").animate({left: '15%'});
-//     });
+    $("#educationSection").delay(0).fadeIn(0, function(){
+    	$("#educationSection").slideUp(0);
+    });
 
-//     $("#tabs").delay(1400).fadeIn("slow", function(){
-//     	$("#tabs").animate({left: '15%'});
-//     });
+    $("#goalsSection").delay(0).fadeIn(0, function(){
+    	$("#goalsSection").slideUp(0);
+    });
 
-//     // $("#golemLink").fadeIn("slow", function(){
-//     // 	$("#golemLink").animate({left: '45%'});
-//     // })
-    
-// });
+    $("#historyClickable").delay(800).fadeIn("slow");
+
+    $("#educationClickable").delay(800).fadeIn("slow");
+
+    $("#goalsClickable").delay(800).fadeIn("slow");
+
+    //Clicking interative
+    $("#historyClickable").click(function(){
+    	//Store status of the "Personal History" button
+    	var outlineStatus = $("#historyClickable").css("outline-style");
+
+    	if (outlineStatus == "outset") {
+    		$("#historyClickable").css("outline-style", "inset");
+    	}
+    	else {
+    		$("#historyClickable").css("outline-style", "outset");
+    	}
+
+    	//Toggle history section and remove other sections from display.
+    	$("#educationSection").slideUp("slow");
+    	$("#educationClickable").css("outline-style", "outset");
+    	$("#goalsSection").slideUp("slow");
+    	$("#goalsClickable").css("outline-style", "outset");
+
+    	$("#historySection").toggle("slow");
+    });
+
+    $("#educationClickable").click(function(){
+    	//Store status of the "Education" button
+    	var outlineStatus = $("#educationClickable").css("outline-style");
+
+    	if (outlineStatus == "outset") {
+    		$("#educationClickable").css("outline-style", "inset");
+    	}
+    	else {
+    		$("#educationClickable").css("outline-style", "outset");
+    	}
+
+    	$("#historySection").slideUp("slow");
+    	$("#historyClickable").css("outline-style", "outset");
+    	$("#goalsSection").slideUp("slow");
+    	$("#goalsClickable").css("outline-style", "outset");
+
+    	$("#educationSection").toggle("slow");
+    });
+
+    $("#goalsClickable").click(function(){
+		//Store status of the "Goals" button
+    	var outlineStatus = $("#goalsClickable").css("outline-style");
+
+    	if (outlineStatus == "outset") {
+    		$("#goalsClickable").css("outline-style", "inset");
+    	}
+    	else {
+    		$("#goalsClickable").css("outline-style", "outset");
+    	}
+
+    	$("#historySection").slideUp("slow");
+    	$("#historyClickable").css("outline-style", "outset");
+    	$("#educationSection").slideUp("slow");
+    	$("#educationClickable").css("outline-style", "outset");
+
+    	$("#goalsSection").toggle("slow");
+    });
+
+
+});
