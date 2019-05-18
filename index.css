@@ -1,8 +1,6 @@
 body {
 	text-align: center;
-/*		background-repeat: no-repeat;
-	background-image: url("tempBackground.jpg")*/
-	background-color: gray;
+	background-color: grey;
 }
 
 div {
@@ -12,144 +10,111 @@ div {
 	color: white;
 }
 
-#header {
-	font-weight: bold;
-	font-size: 40;
-}
-
-#mainInfoSection {
-	text-align: left;
-	position: fixed;
-	top: -5px;
-	right: -5px;
-
-	height: 930px;
-	color: white;
-	border-style: groove;
-	background-color: black;
-}
-
-/*HIDDEN FOR NOW*/
-#linksSection {
-	visibility: hidden;
-	position: fixed;
-
-	color: white;
-	border-style: none;
-	background-color: black;
-	right: 0px;
-	top: 500px;
-}
-
 a {
 	color: blue;
 }
 
 a:visited {
-	color: white;
+	color: purple;
 }
 
-/*#myPic {
-	position: fixed;
-	left: 3%;
-	top: 7%;
+/*This is where my information will be displayed*/
 
-	border-style: groove;
-}*/
-
-/*#picLabel {
-	position: fixed;
-	top: 52%;
-	left: 10%;	
-}
-*/
-#cascadedInfoSection {
-	position: fixed;
-	left: 45%;
-	top: 50%;
-}
-
-#historyClickable {
-
-	margin: center;
-
-	position: fixed;
-	right: 285px;
-	top: 480px;
-
-	width: 150px;
-	outline-style: outset;
-	outline-width: thick;
-	background: grey;
-}
-
-#historySection {
-	margin: center;
-
+/*All information elements*/
+#infoSections {
 	text-align: left;
+	position: absolute;
+	top: 30px;
+	right: 100px;
+
+	height: 500px;
+	width: 700px;
+	color: white;
+
+	background-color: black;
+}
+
+/*My home element*/
+#homeSection {
+	position: absolute;
+}
+
+/*Part of homeSection*/
+#welcomeBanner {
+	font-weight: bold;
+	font-size: 40;
+    text-align: center;
+}
+
+/*Part of homeSection*/
+#whoAmI {
+	font-weight: bold;
+	font-size: 20;
+	text-align: center;
+}
+
+/*Part of homeSection*/
+#currentOccupation {
+	font-weight: bold;
+	font-size: 20;
+	text-align: center;
+}
+
+/*Part of homeSection*/
+#contactInformation {
+	font-weight: bold;
+	font-size: 20;
+	text-align: center;
+}
+
+
+#educationSection {
+	visibility: hidden;
+	position: absolute;
+}
+
+
+#experienceSection {
+	visibility: hidden;
+	position: absolute;
+}
+
+#linksSection {
+	visibility: hidden;
+	position: absolute;
+}
+
+/*Clickable tabs to change which information element is displayed*/
+
+#clickableTabs {
+	text-align: center;
+
 	position: fixed;
-	top: 560px;
-	left: 1040px;
 
+	top: 570px;
+	right: 100px;
 
-	width:  650px;
-	height: 250px;
-	outline-style: groove;
-	background: black;
+	width: 700px;
+
+	background: #373A67;
+}
+
+#homeClickable {
+	cursor: pointer;
+	font-size: 40px;
 }
 
 #educationClickable {
-	margin: center;
-
-	position: fixed;
-	right: 550px;
-	top: 480px;
-
-	width: 150px;
-	outline-style: outset;
-	outline-width: thick;
-	background: grey;
+	cursor: pointer;
+	font-size: 40px;
 }
 
-#educationSection {
-	margin: center;
-
-	text-align: left;
-	position: fixed;
-	top: 560px;
-	left: 1040px;
-
-
-	width:  650px;
-	height: 250px;
-	outline-style: groove;
-	background: black;
+#experienceClickable {
+	cursor: pointer;
+	font-size: 40px;
 }
 
-#goalsClickable {
-	margin: center;
-
-	position: fixed;
-	right: 20px;
-	top: 480px;
-
-	width: 150px;
-	outline-style: outset;
-	outline-width: thick;
-	background: grey;
-}
-
-#goalsSection {
-	margin: center;
-
-	text-align: left;
-	position: fixed;
-	top: 560px;
-	left: 1040px;
-
-
-	width:  650px;
-	height: 250px;
-	outline-style: groove;
-	background: black;
+#linksClickable {
+	cursor: pointer;
+	font-size: 40px;
 }
