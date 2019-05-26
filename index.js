@@ -12,11 +12,18 @@ $(document).ready(function() {
             //If the home section is hidden
             if ($("#homeSection").css("visibility") === "hidden")
             {
-                //Leave only home section visible
+                //Display home section and hide others.
                 $("#homeSection").css("visibility", "visible");
+                $(this).css("text-shadow", "2px 2px 8px white"); //Light up the home tab.
+
                 $("#educationSection").css("visibility", "hidden");
+                $("#educationClickable").css("text-shadow", "none");
+
                 $("#experienceSection").css("visibility", "hidden");
+                $("#experienceClickable").css("text-shadow", "none");
+
                 $("#linksSection").css("visibility", "hidden");
+                $("#linksClickable").css("text-shadow", "none");
             }
         });
 
@@ -34,11 +41,19 @@ $(document).ready(function() {
             //If the education section is hidden
             if ($("#educationSection").css("visibility") === "hidden")
             {
-                //Leave only education section visible
+                //Display education section and hide the others.
                 $("#homeSection").css("visibility", "hidden");
+                $("#homeClickable").css("text-shadow", "none");
+
                 $("#educationSection").css("visibility", "visible");
+                $(this).css("text-shadow", "2px 2px 8px white"); //Light up the education tab
+
                 $("#experienceSection").css("visibility", "hidden");
+                $("#experienceClickable").css("text-shadow", "none");
+
                 $("#linksSection").css("visibility", "hidden");
+                $("#linksClickable").css("text-shadow", "none");
+
             }
         });
 
@@ -56,11 +71,18 @@ $(document).ready(function() {
             //If the experience section is hidden
             if ($("#experienceSection").css("visibility") === "hidden")
             {
-                //Leave only experience section visible
+                //Display experience section and hide others.
                 $("#homeSection").css("visibility", "hidden");
+                $("#homeClickable").css("text-shadow", "none");
+
                 $("#educationSection").css("visibility", "hidden");
+                $("#educationClickable").css("text-shadow", "none");
+
                 $("#experienceSection").css("visibility", "visible");
+                $(this).css("text-shadow", "2px 2px 8px white"); //Light up the experience tab
+
                 $("#linksSection").css("visibility", "hidden");
+                $("#linksClickable").css("text-shadow", "none");
             }
         });
 
@@ -78,18 +100,23 @@ $(document).ready(function() {
             //If the link section is hidden
             if ($("#linksSection").css("visibility") === "hidden")
             {
-                //Leave only link section visible
+                //Display links section and hide others.
                 $("#homeSection").css("visibility", "hidden");
+                $("#homeClickable").css("text-shadow", "none");
+
                 $("#educationSection").css("visibility", "hidden");
+                $("#educationClickable").css("text-shadow", "none");
+
                 $("#experienceSection").css("visibility", "hidden");
+                $("#experienceClickable").css("text-shadow", "none");
+
                 $("#linksSection").css("visibility", "visible");
+                $(this).css("text-shadow", "2px 2px 8px white"); //Light up the link tab
             }
         });
 
     } , function() {
         $(this).css("background-color", "#373A67"); //Remove highlight
     });
-
-
 
 });
