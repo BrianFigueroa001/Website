@@ -36,6 +36,7 @@ a:visited {
 
 /*My home element*/
 #homeSection {
+	visibility: hidden;
 	position: absolute;
 }
 
@@ -96,25 +97,31 @@ a:visited {
 
 	width: 700px;
 
-	background: #373A67;
+	background-color: #373A67;
 }
 
 #homeClickable {
+
 	cursor: pointer;
 	font-size: 40px;
+
 }
 
 #educationClickable {
+
+
 	cursor: pointer;
 	font-size: 40px;
 }
 
 #experienceClickable {
+
 	cursor: pointer;
 	font-size: 40px;
 }
 
 #linksClickable {
+
 	cursor: pointer;
 	font-size: 40px;
 }
