@@ -1,7 +1,12 @@
 body {
+	background-image: url('homeTest.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: black;
+
 	text-align: center;
-	background-color: grey;
-}
+
+}	
 
 div {
 	max-width: ;
@@ -18,12 +23,14 @@ a:visited {
 	color: purple;
 }
 
-/*This is where my information will be displayed*/
+/*This is where information is displayed ot the user*/
 
-/*All information elements*/
+/*Styles all different information section*/
 #infoSections {
+	visibility: hidden;
 	text-align: left;
 	position: absolute;
+	
 	top: 30px;
 	right: 100px;
 
@@ -31,15 +38,19 @@ a:visited {
 	width: 700px;
 	color: white;
 
-	background-color: black;
+	background-color: #161728;
 }
 
 /*My home element*/
 #homeSection {
-	visibility: visible;
+/*	visibility: visible;*/
 	position: absolute;
+
 }
 
+#contactInfo {
+	text-align: center;
+}
 /*Part of homeSection*/
 #welcomeBanner {
 	font-weight: bold;
@@ -48,40 +59,25 @@ a:visited {
 }
 
 /*Part of homeSection*/
-#whoAmI {
+#whoAmI, #currentOccupation {
 	font-weight: bold;
 	font-size: 20;
 	text-align: center;
 }
-
-/*Part of homeSection*/
-#currentOccupation {
-	font-weight: bold;
-	font-size: 20;
-	text-align: center;
-}
-
-/*Part of homeSection*/
-#contactInformation {
-	font-weight: bold;
-	font-size: 20;
-	text-align: center;
-}
-
 
 #educationSection {
-	visibility: hidden;
+/*	visibility: hidden;*/
 	position: absolute;
 }
 
 
 #experienceSection {
-	visibility: hidden;
+/*	visibility: hidden;*/
 	position: absolute;
 }
 
 #linksSection {
-	visibility: hidden;
+/*	visibility: hidden;*/
 	position: absolute;
 }
 
@@ -90,7 +86,7 @@ a:visited {
 #clickableTabs {
 	text-align: center;
 
-	position: fixed;
+	position: absolute;
 
 	top: 570px;
 	right: 100px;
@@ -100,36 +96,12 @@ a:visited {
 	background-color: #373A67;
 }
 
-#homeClickable {
-
-	cursor: pointer;
-	font-size: 40px;
-
-	text-shadow: 2px 2px 8px white;
-
-}
-
-#educationClickable {
-
+#homeClickable, #educationClickable, #experienceClickable, #linksClickable {
 
 	cursor: pointer;
 	font-size: 40px;
 
 	text-shadow: none;
+
 }
 
-#experienceClickable {
-
-	cursor: pointer;
-	font-size: 40px;
-
-	text-shadow: none;
-}
-
-#linksClickable {
-
-	cursor: pointer;
-	font-size: 40px;
-
-	text-shadow: none;
-}
