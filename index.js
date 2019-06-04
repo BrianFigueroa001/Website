@@ -110,7 +110,7 @@ function clickTab(selectedTab, selectedSection, backgroundImage) {
         $("#linksClickable").css("text-shadow", "none"); 
     }
 
-        //Display the selected section and light up its corresponding tab.
+    //Display the selected section and light up its corresponding tab.
     $("body").css("background-image", backgroundImage);
     $(selectedSection).fadeIn(500);
     $(selectedTab).css("text-shadow", "2px 2px 8px white");
