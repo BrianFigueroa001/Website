@@ -1,20 +1,10 @@
 body {
-	background-image: url('homeTest.jpg');
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-color: black;
-
-/*	height: 100%;
-	width: 100%;*/
-	text-align: center;
-
+   font-size: 16px;
 }	
 
 div {
-
 	font-family: "Lucida Console", Monaco, monospace;
 	color: white;
-	padding: 1%;
 }
 
 a {
@@ -25,85 +15,97 @@ a:visited {
 	color: purple;
 }
 
+#backgrounds{
+	position: fixed;
+	top: 0vw;
+	left: 0vw;
+	background-color: white;
+}
+
+#backgrounds img{
+	position: absolute;
+	width: 100vmax;
+	height: auto;
+  	z-index: 0;
+}
+
+#img1 {
+	z-index: 1;
+}
+
 /*This is where information is displayed ot the user*/
 
 /*Styles all different information section*/
 #infoSections {
-	visibility: hidden;
+	padding: 1em;
 	text-align: left;
-	font-size: 100%;
-	position: absolute;
-	
-	top: 5%;
-	right: 10%;
-
-	height: 55%;
-	width: 42%;
+	position: relative; /**/
+	top: 2em;
+	left: 65em;
+	height: 30em;
+	width: 50em;
 	color: white;
-
 	background-color: #161728;
 }
+/*---------------------------*/
 
 /*My home element*/
 #homeSection {
-/*	visibility: visible;*/
-	position: absolute;
+	font-size: 1em;
+}
 
+/*Part of homeSection*/
+#welcomeBanner {
+	font-weight: bold;
+    text-align: center;
+    font-size: 1.6em;
 }
 
 #contactInfo {
 	text-align: center;
+	font-size: 1.1em;
 }
-/*Part of homeSection*/
-#welcomeBanner {
-	font-weight: bold;
-	font-size: 250%;
-    text-align: center;
-}
-
 /*Part of homeSection*/
 #whoAmI, #currentOccupation {
 	font-weight: bold;
-	font-size: 150%;
 	text-align: center;
+	font-size: 1.1em;
 }
 
+/*------------------------------*/
+
 #educationSection {
-/*	visibility: hidden;*/
-	position: absolute;
+/*	visibility: hidden;
+	position: absolute;*/
 }
 
 
 #experienceSection {
-/*	visibility: hidden;*/
-	position: absolute;
+/*	visibility: hidden;
+	position: absolute;*/
 }
 
 #linksSection {
-/*	visibility: hidden;*/
-	position: absolute;
+/*	visibility: hidden;
+	position: absolute;*/
 }
 
 /*Clickable tabs to change which information element is displayed*/
 
 #clickableTabs {
+	padding: 0.5em;
 	text-align: center;
-
-	position: absolute;
-
-	top: 70%;
-	right: 10%;
-
-	width: 42%;
-
+	position: relative;
+	top: 1em;
+	left: 65em;
+	width: 51em;
 	background-color: #373A67;
 }
 
 #homeClickable, #educationClickable, #experienceClickable, #linksClickable {
-
+	padding: 0.2em;
 	cursor: pointer;
-	font-size: 200%;
-
+	font-size: 1.5em;
 	text-shadow: none;
 
 }
