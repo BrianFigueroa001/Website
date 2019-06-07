@@ -51,77 +51,74 @@ $(document).ready(function() {
 /*
 Displays the section the user wants to see, and hides every other.
 Also lights up the tab that the user selected while de-lighting every other.
-Parameters: jQuery object, string containing section, string containing img url
+The background "crossfades" into another by setting the corresponding image "below"
+the current image like in a pile, and the top image will fade out and display the new image.
+
+Image1 = home tab. Img2 = Links/Projects tab. Img3 = education tab. Img4 = experience tab.
 */
-function clickTab(selectedTab, selectedSection, image) {
-    $(image).css("z-index", "0");
-    $(image).animate({opacity: '1'}, 0);
-    //Fade out the non-selected sections and remove the lighting
+function clickTab(selectedTab, selectedSection, newBackground) {
+    $(newBackground).css("z-index", "-2"); //Set this image below the current background
+    $(newBackground).animate({opacity: '1'}, 0); //Immediately set its opacity to 1.
+    $(selectedSection).css("z-index", "0");
+    $(selectedSection).animate({opacity: '1'}, 0);
+    //Fade out the non-selected sections, remove tab-text lighting, and 
     if (!$("#homeClickable").is(selectedTab))
     {
-        $("#img1").css("z-index", "1");
-        $("#img1").animate({opacity: '0'}, 500);
-        $("#homeSection").fadeOut(0);
-        $("#homeClickable").css("text-shadow", "none"); 
+        $("#img1").css("z-index", "-1"); //Set this image in front of all other elements
+        $("#img1").animate({opacity: '0'}, 300); //Fade this image out; it will "Crossfade" to the corresponding image parameter
+        // $("#homeSection").(500); //Fade out home section.
+        // $("#homeClickable").css("text-shadow", "none"); //Remove tab-text lighting.
+        $("#homeSection").css("z-index", "1");
+        $("#homeSection").animate({opacity: '0'}, 500); //Fade out home section.
+        $("#homeClickable").css("text-shadow", "none"); //Remove tab-text lighting.
     }
 
     if (!$("#linksClickable").is(selectedTab))
     {
-        $("#img2").css("z-index", "1");
-        $("#img2").animate({opacity: '0'}, 500);
-        $("#linksSection").fadeOut(0);
+        $("#img2").css("z-index", "-1");
+        $("#img2").animate({opacity: '0'}, 300);
+        $("#linksSection").css("z-index", "1");
+        $("#linksSection").animate({opacity: '0'}, 500);
         $("#linksClickable").css("text-shadow", "none"); 
     }
 
     if (!$("#educationClickable").is(selectedTab))
     {
-        $("#img3").css("z-index", "1");
-        $("#img3").animate({opacity: '0'}, 500);
-        $("#educationSection").fadeOut(0);
+        $("#img3").css("z-index", "-1");
+        $("#img3").animate({opacity: '0'}, 300);
+        $("#educationSection").css("z-index", "1");
+        $("#educationSection").animate({opacity: '0'}, 500);
         $("#educationClickable").css("text-shadow", "none"); 
     }
 
     if (!$("#experienceClickable").is(selectedTab))
     {
-        $("#img4").css("z-index", "1");
-        $("#img4").animate({opacity: '0'}, 500);
-        $("#experienceSection").fadeOut(0);
+        $("#img4").css("z-index", "-1");
+        $("#img4").animate({opacity: '0'}, 300);
+        $("#experienceSection").css("z-index", "1");
+        $("#experienceSection").animate({opacity: '0'}, 500);
         $("#experienceClickable").css("text-shadow", "none"); 
     }
-    //Display the selected section and light up its corresponding tab.
-    // $("body").css("background-image", backgroundImage);
-    // $(image).fadeIn(100);
-    $(selectedSection).fadeIn(500);
-    $(selectedTab).css("text-shadow", "2px 2px 8px white");
+
+    // $(selectedSection).fadeIn(500); //Fdde in corresponding section
+    $(selectedTab).css("text-shadow", "2px 2px 8px white"); //Highlight corresponding tab-text lighting.
 }
 
 /*The following lines of code hides everything initially, and then shows the background, home section, and tabs in that order*/
 function initialize()
-{
-    $("#img2").animate({opacity: '0'}, 0);
-    $("#img3").animate({opacity: '0'}, 0);
-    $("#img4").animate({opacity: '0'}, 0);
-    $("#infoSections").fadeOut(0);
-    $("#clickableTabs").fadeOut(0);
-    $("#homeSection").fadeOut(0);
-    $("#educationSection").fadeOut(0);
-    $("#experienceSection").fadeOut(0);
-    $("#linksSection").fadeOut(0);
-    $("#homeClickable").fadeOut(0);
-    $("#educationClickable").fadeOut(0);
-    $("#experienceClickable").fadeOut(0);
-    $("#linksClickable").fadeOut(0);
-    //Automatically light up home tab since home section is initially displayed.
-    $("#homeClickable").css("text-shadow", "2px 2px 8px white");
-    //Gets rid of overlapping sections for the split-second duration upon opening the website
-    $("#infoSections").css("visibility", "visible");
+{   
+    initialDisappear();
+    initialAppear();
+}
 
-    /*The initial elements to be displayed (background, home section, and all tabs)*/
-    $("#infoSections").fadeIn(500);
-    $("#homeSection").fadeIn(600);
-    $("#clickableTabs").fadeIn(700);
-    $("#homeClickable").fadeIn(850);
-    $("#educationClickable").fadeIn(1000);
-    $("#experienceClickable").fadeIn(1150);
-    $("#linksClickable").fadeIn(1300);
+function initialDisappear() { 
+    $("#infoSections, #clickableTabs").animate({opacity: '0'}, 0);
+    $("#linksSection, #educationSection, #experienceSection").animate({opacity: '0'}, 0);
+    $("#img2, #img3, #img4").animate({opacity: '0'}, 0);
+}
+
+function initialAppear()
+{
+    $("#infoSections, #clickableTabs").animate({opacity: '1'}, "slow");
+    $("#homeClickable").css("text-shadow", "2px 2px 8px white");
 }

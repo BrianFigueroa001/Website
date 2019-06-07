@@ -1,5 +1,6 @@
 body {
    font-size: 16px;
+   background-color: black;
 }	
 
 div {
@@ -22,20 +23,25 @@ a:visited {
 	background-color: white;
 }
 
+/*Images will be "stacked" over one another.*/
 #backgrounds img{
 	position: absolute;
 	width: 100vmax;
 	height: auto;
-  	z-index: 0;
 }
 
+/*Image 1 will be the first background displayed*/
 #img1 {
-	z-index: 1;
+	z-index: -1;
+}
+
+#img2, #img3, #img4 {
+	z-index: -2;
 }
 
 /*This is where information is displayed ot the user*/
 
-/*Styles all different information section*/
+/*Where information is displayed.*/
 #infoSections {
 	padding: 1em;
 	text-align: left;
@@ -48,10 +54,16 @@ a:visited {
 	background-color: #161728;
 }
 /*---------------------------*/
+#homeSection, #educationSection, #experienceSection, #linksSection {
+/*	visibility: hidden;
+	position: absolute;*/
+	position: absolute;
+}
 
-/*My home element*/
+/*My home section*/
 #homeSection {
 	font-size: 1em;
+	z-index: 1;
 }
 
 /*Part of homeSection*/
@@ -74,20 +86,10 @@ a:visited {
 
 /*------------------------------*/
 
-#educationSection {
+#educationSection, #experienceSection, #linksSection {
 /*	visibility: hidden;
 	position: absolute;*/
-}
-
-
-#experienceSection {
-/*	visibility: hidden;
-	position: absolute;*/
-}
-
-#linksSection {
-/*	visibility: hidden;
-	position: absolute;*/
+	z-index: 0;
 }
 
 /*Clickable tabs to change which information element is displayed*/
@@ -96,7 +98,7 @@ a:visited {
 	padding: 0.5em;
 	text-align: center;
 	position: relative;
-	top: 1em;
+	top: 2em;
 	left: 65em;
 	width: 51em;
 	background-color: #373A67;
@@ -107,6 +109,8 @@ a:visited {
 	cursor: pointer;
 	font-size: 1.5em;
 	text-shadow: none;
-
 }
 
+#homeClickable {
+	text-shadow: 2px 2px 8px white;
+}
