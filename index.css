@@ -25,8 +25,8 @@ a:visited {
 
 /*Images will be "stacked" over one another.*/
 #backgrounds img{
-	background-size: cover;
-	width: 100%;
+	position: absolute;
+	width: 100vmax;
 	height: auto;
 }
 
