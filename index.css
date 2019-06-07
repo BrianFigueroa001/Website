@@ -4,7 +4,7 @@ body {
 }	
 
 div {
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: Arial, Helvetica, sans-serif;
 	color: white;
 }
 
@@ -25,8 +25,8 @@ a:visited {
 
 /*Images will be "stacked" over one another.*/
 #backgrounds img{
-	position: absolute;
-	width: 100vmax;
+	background-size: cover;
+	width: 100%;
 	height: auto;
 }
 
