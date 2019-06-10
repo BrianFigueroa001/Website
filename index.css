@@ -35,8 +35,16 @@ a:visited {
 	z-index: -1;
 }
 
-#bg2, #bg3, #bg4 {
+#bg2 {
 	z-index: -2;
+}
+
+#bg3 {
+	z-index: -3;
+}
+
+#bg4 {
+	z-index: -4;
 }
 
 /*This is where information is displayed ot the user*/
@@ -54,16 +62,17 @@ a:visited {
 	background-color: #161728;
 }
 /*---------------------------*/
-#homeSection, #linkSection, #eduSection, #expSection {
-/*	visibility: hidden;
-	position: absolute;*/
+/*#homeSection, #linkSection, #eduSection, #expSection {
+	visibility: hidden;
 	position: absolute;
-}
+	position: absolute;
+}*/
 
 /*My home section*/
 #homeSection {
+	position: absolute;
 	font-size: 1em;
-	z-index: 1;
+	z-index: 4;
 }
 
 /*Part of homeSection*/
@@ -86,10 +95,24 @@ a:visited {
 
 /*------------------------------*/
 
-#linkSection, #eduSection, #expSection {
+#linkSection
+{
+	position: absolute;
 /*	visibility: hidden;
 	position: absolute;*/
-	z-index: 0;
+	z-index: 3;
+}
+
+#eduSection 
+{
+	position: absolute;
+	z-index: 2;
+}
+
+#expSection 
+{
+	position: absolute;
+	z-index: 1;
 }
 
 /*Clickable tabs to change which information element is displayed*/

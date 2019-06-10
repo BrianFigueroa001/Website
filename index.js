@@ -1,135 +1,128 @@
-$(document).ready
-(
-    function() 
-    {
-        initialize();
+$(document).ready(function(){
+    initialize();
 
-        //When user hovers over a tab.
-        $("#homeTab, #linkTab, #eduTab, #expTab").hover
-        ( 
-            function() 
-            {
-            $(this).css("background-color", "#21244c"); //Highlight tab
-            } , 
+    //Stores data containing each section and their associated tab and background.
+    let homeDisplay = {section: "#homeSection", tab: "#homeTab", bgImage: "#bg1"}; 
+    let linkDisplay = {section: "#linkSection", tab: "#linkTab", bgImage: "#bg2"};
+    let eduDisplay = {section: "#eduSection", tab: "#eduTab", bgImage: "#bg3"};
+    let expDisplay = {section: "#expSection", tab: "#expTab", bgImage: "#bg4"};
 
-            function() 
-            { 
-            $(this).css("background-color", "#373A67"); //Remove highlight
-            }
-        );
+    let currentDisplay = homeDisplay; //Tracks the current display
 
-        //When user clicks any of the tabs.
-        $("#homeTab, #linkTab, #eduTab, #expTab").click
-        (
-            function() 
-            {
-                tabClicked(this)
-            }
-        );
-    }
-);
+    //When user hovers over a tab.
+    $("#homeTab, #linkTab, #eduTab, #expTab").hover(function() {
+        $(this).css("background-color", "#21244c"); //Highlight tab
+    } , function() { 
+        $(this).css("background-color", "#373A67"); //Remove highlight
+    });
+
+    //When user clicks any of the tabs.
+    $("#homeTab, #linkTab, #eduTab, #expTab").click(function() {
+    // function() 
+    // {
+    //     //Update what's displayed according to the tab theu ser selected.
+    //     tabClicked(this, currentTab);
+    //     //Update the current tab.
+    //     currentTab = this;
+    // }
+        if ($(this).is("#homeTab")) {
+            changeDisplay(homeDisplay, currentDisplay);
+            currentDisplay = homeDisplay;
+        }
+
+        else if ($(this).is("#linkTab")) {
+            changeDisplay(linkDisplay, currentDisplay);
+            currentDisplay = linkDisplay;
+        }
+
+        else if ($(this).is("#eduTab")) {
+            changeDisplay(eduDisplay, currentDisplay);
+            currentDisplay = eduDisplay;
+        }
+
+        else {
+            changeDisplay(expDisplay, currentDisplay);
+            currentDisplay = expDisplay;
+        }
+    });
+});
 
 /*Slowly fade in the elements on the website when it's first opened.*/
-function initialize()
-{   
+function initialize() {   
     initialDisappear();
     initialAppear();
 }
 
 //Make everything except the home background disappear.
-function initialDisappear() 
-{ 
+function initialDisappear() { 
     $("#infoSections, #clickableTabs").animate({opacity: '0'}, 0);
     $("#linkSection, #eduSection, #expSection").animate({opacity: '0'}, 0);
     $("#bg2, #bg3, #bg4").animate({opacity: '0'}, 0);
 }
 
 //Diplsay the home section first and light up the home tab.
-function initialAppear()
-{
+function initialAppear() {
     $("#infoSections, #clickableTabs").animate({opacity: '1'}, "slow");
     $("#homeTab").css("text-shadow", "2px 2px 8px white");
 }
 
-/*
-Captures which tab the user clicked.
-*/
-function tabClicked(clickedTab)
-{
-    if ($(clickedTab).is("#homeTab"))
-    {
-        changeInfo("#homeTab", "#homeSection", "#bg1"); //Display home
-    }
-
-    else if ($(clickedTab).is("#linkTab")) 
-    {
-        changeInfo("#linkTab", "#linkSection", "#bg2"); //Display links & projects
-    }
-
-    else if ($(clickedTab).is("#eduTab")) 
-    {
-        changeInfo("#eduTab", "#eduSection", "#bg3"); //Display education
-    }
-
-    else
-    {
-        changeInfo("#expTab", "#expSection", "#bg4"); //Display work experience
+//Update what's displayed; show the new section/background, and light up the tab that the user selected.
+function changeDisplay(newDisplay, currentDisplay) {
+    //Prevents a black screen from the user clicking the same tab twice.
+    if (newDisplay !== currentDisplay) {
+        updateTabLighting(newDisplay, currentDisplay);
+        updateBackgroundIndex(newDisplay, currentDisplay);
+        // updateSectionIndex(newDisplay, currentDisplay);
+        crossfade(newDisplay, currentDisplay);
     }
 }
 
-//Changes what's displayed on the screen based on which tab the user clicked on.
-function changeInfo(clickedTab, newSection, newBG)
-{
-    //Prepare the new background to display.
-    $(newBG).css("z-index", "-2"); //Set this background below the current
-    $(newBG).animate({opacity: '1'}, 0); //Make it visible and ready for display
-        
 
+//Make sure that the new background has a lower z-index value than the current background.
+function updateBackgroundIndex(newDisplay, currentDisplay) {
+    //Note that css({property}) seems to return a string. Must parse into an int for comparisons.
 
-    //Prepare the new section to display.
-    $(newSection).css("z-index", "0");//Set this section below the current.
-    $(newSection).animate({opacity: '1'}, 0); //Make it visible and ready for display
-    
-    $(clickedTab).css("text-shadow", "2px 2px 8px white"); //Light up the clicked tab.
+    let newBGPos = parseInt($(newDisplay.bgImage).css("z-index")); //Get z-index position of new background as an integer
+    let currentBGPos = parseInt($(currentDisplay.bgImage).css("z-index")); //Get z-index position of current background.
 
+    //Check if the new background's z-index is higher than the current BG. If so, their values must be swapped
+    if (newBGPos > currentBGPos) {
+        //Swap z-index values
+        let temp = newBGPos;
+        newBGPos = currentBGPos;
+        currentBGPos = temp;
 
-    //Make each section and background disappear except for the new one to be displayed
-    if (!$(newSection).is("#homeSection"))
-    {
-        $("#homeTab").css("text-shadow", "none"); //Remove lighting.
-        crossfade("#homeSection", "#bg1"); //Remove home section and its background
-
-    }
-
-    if (!$(newSection).is("#linkSection"))
-    {
-        $("#linkTab").css("text-shadow", "none"); 
-        crossfade("#linkSection", "#bg2");
-
-    }
-
-    if (!$(newSection).is("#eduSection"))
-    {
-        $("#eduTab").css("text-shadow", "none"); 
-        crossfade("#eduSection", "#bg3");
-
-    }
-
-    if (!$(newSection).is("#expSection"))
-    {
-        $("#expTab").css("text-shadow", "none"); 
-        crossfade("#expSection","#bg4");
+        //Make the new background hidden behind the current background by switching their z-index positions.
+        $(currentDisplay.bgImage).css("z-index", currentBGPos);  
+        $(newDisplay.bgImage).css("z-index", newBGPos); //By having the lower z-index, its hidden behind the current background.
     }
 }
 
-/*
-Changes the opacity of the the current section/background to 0, making it invisible. 
-Since the new section/background is "below" is below the current section/background, it will
-"crossfade" between the current and new.*/
-function crossfade(fadingSection, fadingBG)
-{
-        $(fadingBG).css("z-index", "-1");
-        $(fadingBG).animate({opacity: '0'}, 500);
-        $(fadingSection).css("z-index", "1");
-        $(fadingSection).animate({opacity: '0'}, 500);
+
+//Light up the text that the user clicked on, and turn off the previous.
+function updateTabLighting(newDisplay, currentDisplay) {
+    $(newDisplay.tab).css("text-shadow", "2px 2px 8px white");
+    $(currentDisplay.tab).css("text-shadow", "none");
 }
+
+//Crossfade from the previous background/section into the one that the user selected.
+function crossfade(newDisplay, currentDisplay) {
+    crossfadeBG(newDisplay, currentDisplay); //Crossfade from the current background to the new background.
+    crossfadeSect(newDisplay, currentDisplay); //Crossfade from the current section to the new section.
+}
+
+//Crossfade from the current background to the new background.
+function crossfadeBG(newDisplay, currentDisplay) {
+    $(newDisplay.bgImage).animate({opacity: '1'}, 0, function() { //Make the new background have full opacity instantly while it's still behind the current background
+            $(currentDisplay.bgImage).animate({opacity: '0'}, 600); //Fade the current background at the front in a span of 600 milliseconds, making it "crossfade" into the new background.
+    }); 
+}
+
+//Crossfade from the current section to the new section.
+function crossfadeSect(newDisplay, currentDisplay)
+{
+    $(newDisplay.section).animate({opacity: '1'}, 0, function() { //Make the new section have full opacity instantly.
+            $(currentDisplay.section).animate({opacity: '0'}, 600); //Fade the current section in the spam of 600 milliseconds, making it "crossfade" into the new section.
+    });
+}
+
