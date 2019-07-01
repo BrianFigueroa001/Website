@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
     startGoogleTranslateElement(); //Initialize google translate
     initializeDisplay();
@@ -116,8 +116,7 @@ function crossfadeBG(newDisplay, currentDisplay) {
 }
 
 //Crossfade from the current section to the new section.
-function crossfadeSect(newDisplay, currentDisplay)
-{
+function crossfadeSect(newDisplay, currentDisplay) {
     $(newDisplay.section).animate({opacity: '1'}, 600);
     $(currentDisplay.section).animate({opacity: '0'}, 600);
 }
