@@ -75,7 +75,7 @@ function changeDisplay(newDisplay, currentDisplay) {
 
 //Make sure that the new background has a lower z-index value than the current background.
 function updateBackgroundIndex(newDisplay, currentDisplay) {
-    //Note that css({property}) seems to return a string. Must parse into an int for comparisons.
+    //Note that .css({property}) seems to return a string. Must parse into an int for comparisons.
 
     let newBGPos = parseInt($(newDisplay.bgImage).css("z-index")); //Get z-index position of new background as an integer
     let currentBGPos = parseInt($(currentDisplay.bgImage).css("z-index")); //Get z-index position of current background.
