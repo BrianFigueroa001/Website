@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-    startGoogleTranslateElement(); //Initialize google translate
     initializeDisplay();
 
     //Stores data containing each section and their associated tab and background.
@@ -121,8 +119,3 @@ function crossfadeSect(newDisplay, currentDisplay) {
     $(currentDisplay.section).animate({opacity: '0'}, 600);
 }
 
-//Access google translate's API. It'll modify div element 'googleTranslateElement'
-function startGoogleTranslateElement()
-{
-     new google.translate.TranslateElement({pageLanguage: 'en'}, 'googleTranslateElement');
-}
