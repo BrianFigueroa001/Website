@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-
+    googleTranslateElementInit();
     initializeDisplay();
 
     //Stores data containing each section and their associated tab and background.
