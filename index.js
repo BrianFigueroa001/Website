@@ -122,3 +122,7 @@ function crossfadeSect(newDisplay, currentDisplay)
     $(currentDisplay.section).animate({opacity: '0'}, 600);
 }
 
+//Calling Google Translate API
+function googleTranslateElementInit() { 
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element'); 
+} 
