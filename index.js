@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    initialize();
+    
+
+    initializeDisplay();
 
     //Stores data containing each section and their associated tab and background.
     let homeDisplay = {section: "#homeSection", tab: "#homeTab", bgImage: "#bg1"}; 
@@ -15,16 +17,9 @@ $(document).ready(function(){
     } , function() { 
         $(this).css("background-color", "#373A67"); //Remove highlight
     });
-
+    
     //When user clicks any of the tabs.
     $("#homeTab, #linkTab, #eduTab, #expTab").click(function() {
-    // function() 
-    // {
-    //     //Update what's displayed according to the tab theu ser selected.
-    //     tabClicked(this, currentTab);
-    //     //Update the current tab.
-    //     currentTab = this;
-    // }
         if ($(this).is("#homeTab")) {
             changeDisplay(homeDisplay, currentDisplay);
             currentDisplay = homeDisplay;
@@ -48,7 +43,7 @@ $(document).ready(function(){
 });
 
 /*Slowly fade in the elements on the website when it's first opened.*/
-function initialize() {   
+function initializeDisplay() {   
     initialDisappear();
     initialAppear();
 }
@@ -75,6 +70,8 @@ function changeDisplay(newDisplay, currentDisplay) {
         // updateSectionIndex(newDisplay, currentDisplay);
         crossfade(newDisplay, currentDisplay);
     }
+
+
 }
 
 
@@ -121,8 +118,7 @@ function crossfadeBG(newDisplay, currentDisplay) {
 //Crossfade from the current section to the new section.
 function crossfadeSect(newDisplay, currentDisplay)
 {
-    $(newDisplay.section).animate({opacity: '1'}, 0, function() { //Make the new section have full opacity instantly.
-            $(currentDisplay.section).animate({opacity: '0'}, 600); //Fade the current section in the spam of 600 milliseconds, making it "crossfade" into the new section.
-    });
+    $(newDisplay.section).animate({opacity: '1'}, 600);
+    $(currentDisplay.section).animate({opacity: '0'}, 600);
 }
 
