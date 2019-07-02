@@ -1,18 +1,20 @@
 <html>
 	<head>
 
-	<link rel="stylesheet" type="text/css" href="index.css" media="screen"></link>
-	<script src="jquery-3.3.1.min.js"></script>
-	<script src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css" media="screen"></link> <!-- Access style sheet for screens larger than STILLDECIDING -->
+	<script src="jquery-3.3.1.min.js"></script> <!-- Import jQuery library -->
+	<script src="index.js"></script> <!-- Import js file that includes jQuery code -->
+	<!-- Implement Google Translate API - REQUIRES TESTING AND FIGURING IT OUT-->
+	<!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 
 	<title>Brian's Website</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Set the viewport for the screen -->
+
 	</head>
 
 	<body>
-	
 		
-
 		<div id="backgrounds">
 			<img id ="bg1" src="homeTest.jpg">
 			<img id ="bg2" src="linkTest.jpg">
@@ -22,17 +24,21 @@
 
 		<!-- Element with my information -->
 		<div id="infoSections">
+
 			<div id="homeSection">
-				<header id="welcomeBanner">
+
+				<header id="homeWelcomeBanner">
 				Welcome to Brian's Portfolio website!
 				</header>
+
 				<br>
-				<div id="contactInfo">
+
+				<div id="homeContactInfo">
 				Email: brianfigueroa001@gmail.com<br>
 				Phone Number: (786) - 399 - 5183<br>
 				</div>
 
-				<header id="whoAmI">
+				<header id="homeWhoAmI">
 
 				<br><br>Who am I?
 				</header> 
@@ -41,15 +47,13 @@
 				My name is Brian Figueroa. I'm student at Florida International University and an aspiring Software Engineer.
 				You're visiting my portfolio website which is where I'll talk about myself and provide links to my
 				programming projects.
-				<br>
-				<br>
+				<br><br>
 
-				<header id="currentOccupation">
+				<header id="homeCurrentOccupation">
 				Current Events
 				</header>
 
 				<br>
-
 				I'm currently an intern at Code Explorers since Spring 2019.
 				I have the opportunity to teach pre-university students about various technologies
 				such as robotic and coding. It's my job to enable the next generation
@@ -59,6 +63,7 @@
 				<br><br>
 				I'm also developing a website for my friend who'se an amazing artist! She needs a place place
 				to host her artwork and show off her products! This will be my big project for the Summer of 2019.
+
 			</div>
 
 			<div id="linkSection">
@@ -88,6 +93,16 @@
 			<div id="expTab">Work Experience
 			</div>
 		</div>
+
+		<!-- Google Translate Element -->
+<!-- 		<div id="google_translate_element"></div>
+
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+  				new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+			}
+		</script> -->
+
 	</body>
 
 </html>
