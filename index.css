@@ -21,17 +21,16 @@ a:visited {
 /*---------BACKGROUNDS--------*/
 #backgrounds{
 	position: fixed;
-	
-	/*Removes small spacing from the edge of the background*/
-	top: 0vw;
-	left: 0vw;
+
+	top: 0%;
+	left: 0%;
 }
 
 	#backgrounds img{
 		position: fixed;
 
-		width: 50vw;
-		height: 50vw;
+		width: 50%;
+		height: 100%;
 	}
 
 	/*Backgrounds will be "stacked" over one another.*/
@@ -65,12 +64,10 @@ a:visited {
 	text-align: left;
 	
 	position: fixed;
-	top: 0vw;
-	left: 50vw;
-	max-height: 35vw;
-	min-height: 35vw;
-	max-width: 49vw;
-	min-width: 49vw;
+	top: 0%;
+	left: 50%;
+	height: 70%;
+	width: 50%;
 	
 	color: white;
 	background-color: #161728;
@@ -128,12 +125,10 @@ a:visited {
 	text-align: center;
 	
 	position: fixed; /**/
-	top: 35vw;
-	left: 50vw;
-	max-height: 12.2vw;
-	min-height: 12.2vw;
-	max-width: 50vw;
-	min-width: 50vw;
+	top: 70%;
+	left: 50%;
+	height: 30%;
+	width: 50%;
 	
 	background-color: #373A67;
 }
@@ -144,6 +139,6 @@ a:visited {
 		
 		cursor: pointer; /*Indicate that these are meant to be clicked on.*/
 		
-		font-size: 2em;
+		font-size: 2.5em;
 	}
 
