@@ -1,6 +1,7 @@
 body {
    background-color: black;
    background-size: 100%;
+
 }	
 
 div {
@@ -19,19 +20,17 @@ a:visited {
 }
 
 /*---------BACKGROUNDS--------*/
-#backgrounds{
-	position: fixed;
 
+
+#backgrounds img{
+	position: fixed;
 	top: 0%;
 	left: 0%;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.2;
 }
-
-	#backgrounds img{
-		position: fixed;
-
-		width: 50%;
-		height: 100%;
-	}
 
 	/*Backgrounds will be "stacked" over one another.*/
 	#bg1 { /*Background (General Information/Home) will be the first background displayed upon opening the website*/
@@ -54,91 +53,73 @@ a:visited {
 	}
 
 /*This is where information is displayed ot the user*/
-
-/*Where all information is displayed.*/
-#infoSections {
-	overflow: auto; /*If user zooms in, they can scroll up or down*/
-	padding: 0.5em;
-	margin: 0em;
+#homeSection, #linkSection, #eduSection, #expSection {
+	position: relative;
 	
-	text-align: left;
-	
-	position: fixed;
-	top: 0%;
-	left: 50%;
-	height: 70%;
-	width: 50%;
-	
-	color: white;
-	background-color: #161728;
-}
-
-	#homeSection {
-		position: sticky;
-		font-size: 1em;
-		z-index: 4; /*First section to be displayed upon opening webpage*/
-	}
-
-	
-		#homeWelcomeBanner {
-			font-weight: bold;
-			text-align: center;
-			font-size: 1.6em;
-		}
-
-		#homeContactInfo {
-			text-align: center;
-			font-size: 1.1em;
-		}
-		/*Part of homeSection*/
-		#homeWhoAmI, #homeCurrentOccupation {
-			font-weight: bold;
-			text-align: center;
-			font-size: 1.1em;
-		}
-
-
-	#linkSection
-	{
-		position: absolute;
-		z-index: 3;
-	}
-
-	#eduSection 
-	{
-		position: absolute;
-		z-index: 2;
-	}
-
-	#expSection 
-	{
-		position: absolute;
-		z-index: 1;
-	}
-
-/*Clickable tabs to change which information element is displayed*/
-#clickableTabs {
-	overflow: auto;
+	margin-top: 15em;
+	margin-bottom: 5em;
 	padding: 1em;
-	margin-top: 0em;
-	
-	text-align: center;
-	
-	position: fixed; /**/
-	top: 70%;
-	left: 50%;
-	height: 30%;
-	width: 50%;
-	
-	background-color: #373A67;
+
+	left: 0em;
+	width: 116em;
+	height: 40em;
+
+	font-size: 1em;
+
+	background-color: #0e2a57;
+	opacity: 0.8;
+	z-index: 4; /*First section to be displayed upon opening webpage*/
 }
 
-	#homeTab, #linkTab, #eduTab, #expTab {
-		text-align: center;
-		padding: 0.3em;
-		
-		cursor: pointer; /*Indicate that these are meant to be clicked on.*/
-		
-		font-size: 2.5em;
-	}
+/* HOME SECTION */
 
+#picHome {
+	position: absolute;
+
+	margin: 3em;
+
+	left: 10em;
+	top: 0em;
+}
+
+#homeText {
+	position: absolute;
+
+	margin: 3em;
+
+	left: 40em;
+	top: 0em;
+
+	line-height: 2em;
+}
+
+#homeWelcomeBanner {
+	font-weight: bold;
+	text-align: center;
+	font-size: 3em;
+}
+
+#homeContactInfo, #homeWhoAmI, #homeCurrentOccupation {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.1em;
+}
+/*Part of homeSection*/
+#homeContactInfo {
+	font-weight: normal;
+	margin-top: 1em;
+	margin-bottom: 3em;
+}
+
+/*LINK SECTION*/
+
+#linkText {
+	position: absolute;
+
+	margin: 3em;
+
+	left: 40em;
+	top: 0em;
+
+	line-height: 2em;
+}
