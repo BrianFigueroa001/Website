@@ -4,17 +4,14 @@
 	<link rel="stylesheet" type="text/css" href="index.css" media="screen"></link> <!-- Access style sheet for screens larger than STILLDECIDING -->
 	<script src="jquery-3.3.1.min.js"></script> <!-- Import jQuery library -->
 	<script src="index.js"></script> <!-- Import js file that includes jQuery code -->
-	<!-- Implement Google Translate API - REQUIRES TESTING AND FIGURING IT OUT-->
-	<!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+
 
 	<title>Brian's Website</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set the viewport for the screen -->
-
 	</head>
 
 	<body>
-		
 		<div id="backgrounds">
 			<img id ="bg1" src="homeTest.jpg">
 			<img id ="bg2" src="linkTest.jpg">
@@ -24,7 +21,7 @@
 
 		<div id="homeSection">
 
-			<img id="picHome" src="brianFigPic.jpg">
+			<img id="homePic" src="brianFigPic.jpg">
 
 			<div id="homeText">
 				<header id="homeWelcomeBanner">
@@ -53,32 +50,91 @@
 				such as robotic and coding. It's my job to enable the next generation
 				of students for their future in computer science and engineering!<br>
 				Check out their website: <a href="https://www.codeexplorers.org/">www.codeexplorers.org</a>
-
 			</div>
 		</div>
 
-		<div id="linkSection">
-			<img id="linkPic">
+		<div id="projSection">
+			<header id="projHeader">
+				PROJECTS
+			</header>
 
-			<div id="linkText">
-				<header id="linkHeader">
-					PROJECTS
+			<div id="projTextSummer">
+
+				<header id="projSummerHeader">
+					Summer 2018 Data Structures
 				</header>
 
+				I learned about data structures ahead of my classes in the Summer of 2018 since they are a very important concept. The following lists some of my 
+				favorite toy programs that I made to help me learn:<br><br>
+
+				<b>Stacks Infix Calculator:</b>  This calculator can evaluate simple arithmetic expressions in infix notation. The stack is used to enforce the order of operations as the program reads the string containing the expression.<br>
+
+				<b>RPG Character Table:</b> I explored hash tables by using one to store RPG character objects and their information. Access to each character is granted via a password that's used as the hash key. I used linear probing as my collision resolution.<br>
+			</div>
+
+			<div id="projTextGolem">
+				<header id="projGolemHeader">
+					Golemization Text Converter<br>
+				</header>
+
+				<img id="projGolemPic" src="projGolem.jpg">
+				<br><br><br><br><br><br><br><br><br> 
+				My first JavaScript, CSS, and HTML5 website! It reads user input and converts it to robot speech. It integrates JavaScript's Web Speech API to read the text out loud. Click on the picture to check it out!
+				
 			</div>
 		</div>
 			
 		<div id="eduSection">
-			EDUCATION WIP
+			<header id="eduHeader">
+				Education
+			</header>
+
+			<div id="eduTextBachelor">
+				<header id ="eduTextBachelorHeader">
+					Florida International University<br><br>
+					Bachelor Degree in C.S
+				</header>
+				<div id="expGradDate">
+					Expected Graduation Date: Spring 2021
+				</div>
+
+				Programming 2 (Fall 2018)<br>
+				Data Structures (Spring 2019)<br>
+				Computer Logic (Spring 2019)<br>
+				Programming 3 (Fall 2019)<br>
+
+			</div>
+
+			<div id="eduTextAssociate">
+				<header id ="eduTextAssociateHeader">
+					Miami Dade College<br><br>
+					Associate Degree in C.S
+				</header>
+				<div id="gradDate">
+					Graduation Date: Spring 2018
+				</div>
+
+				Introduction to Programming (Fall 2018)<br>
+				Programming I<br>
+
+			</div>
+
 		</div>
 
 		<div id="expSection">
-			EXPERIENCE WIP
+			<div id="expHeader">
+				Work Experience
+			</div>
+
+
+			<div id="expText">
+					<header id="codeExplorer">
+						Code Explorers Internship
+					</header>
+					I was given the opportunity to teach kids from ages 13 and below about 4th generation technology and basic programming for the summer of 2019. Some of the subjects taught include mobile and 3D game development and Virtual and Augmuented reality. <br><br>
+
+					While most of the coding consisted of block programming, I was able to get my students a headstart on understanding core concepts such as variables, functions, conditional logic, object-oriented programming principles, and even a little bit of data structures.
+			</div>
 		</div>
-
-	
-
-
 	</body>
-
 </html>

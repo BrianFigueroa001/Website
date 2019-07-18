@@ -9,6 +9,15 @@ div {
 	color: white;
 }
 
+header {
+	margin-top: 2em;
+	margin-bottom: 1em;
+
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+}
+
 /*Style hyperlinks*/
 
 a {
@@ -53,33 +62,35 @@ a:visited {
 	}
 
 /*This is where information is displayed ot the user*/
-#homeSection, #linkSection, #eduSection, #expSection {
+#homeSection, #projSection, #eduSection, #expSection {
 	position: relative;
 	
-	margin-top: 15em;
+	margin-top: 12em;
 	margin-bottom: 5em;
 	padding: 1em;
 
-	left: 0em;
-	width: 116em;
+	left: -1em;
+	width: 117.35em;
 	height: 40em;
 
 	font-size: 1em;
-
+	line-height: 1.5em;
 	background-color: #0e2a57;
 	opacity: 0.8;
 	z-index: 4; /*First section to be displayed upon opening webpage*/
 }
 
-/* HOME SECTION */
+/*HOME SECTION*/
 
-#picHome {
+#homePic {
 	position: absolute;
 
 	margin: 3em;
 
 	left: 10em;
 	top: 0em;
+
+	box-shadow: 0em 0em 10px grey;
 }
 
 #homeText {
@@ -89,14 +100,13 @@ a:visited {
 
 	left: 40em;
 	top: 0em;
-
-	line-height: 2em;
 }
 
 #homeWelcomeBanner {
 	font-weight: bold;
 	text-align: center;
 	font-size: 3em;
+	margin-top: 0em;
 }
 
 #homeContactInfo, #homeWhoAmI, #homeCurrentOccupation {
@@ -104,7 +114,7 @@ a:visited {
 	text-align: center;
 	font-size: 1.1em;
 }
-/*Part of homeSection*/
+
 #homeContactInfo {
 	font-weight: normal;
 	margin-top: 1em;
@@ -113,13 +123,121 @@ a:visited {
 
 /*LINK SECTION*/
 
-#linkText {
+#projHeader {
+	font-weight: bold;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 0.5em;
+}
+
+
+#projTextSummer {
 	position: absolute;
 
 	margin: 3em;
 
-	left: 40em;
+	right: 70em;
 	top: 0em;
+
+
+	line-height: 2em;
+}
+
+#projTextGolem {
+	position: absolute;
+
+	margin: 2em;
+
+	left: 78em;
+	top: 0em;
+
+	width: 30em;
+
+	line-height: 2em;
+}
+
+#projGolemPic{
+	position: absolute;
+	margin: 0 auto;
+	left: 7em;
+	height: 15em;
+	width: 15em;
+
+	box-shadow: 0em 0em 10px grey;
+}
+
+/*EDUCATION SECTION*/
+
+#eduHeader {
+	font-weight: bold;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 0.5em;
+	margin-bottom: 3em:
+}
+
+#expGradDate, #gradDate {
+	margin-top: 1em;
+	margin-bottom: 3em;
+
+	font-weight: normal;
+	font-size: 1.1em;
+}
+
+#eduTextBachelor {
+	position: absolute;
+
+	margin-top: 7em;
+
+	right: 47em;
+	top: 0em;
+
+	width: 30em;
+
+	line-height: 1.5em;
+
+	font-size: 1.2em;
+}
+
+
+#eduTextBachelorHeader {
+	text-align: left;
+}
+
+#eduTextAssociate {
+	position: absolute;
+
+	margin-top: 7em;
+
+	left: 75em;
+	top: 0em;
+
+	width: 30em;
+
+	line-height: 1.5em;
+
+	font-size: 1.2em;
+}
+
+#eduTextAssociateHeader {
+	text-align: left;
+}
+
+#expHeader {
+	font-weight: bold;
+	text-align: center;
+	font-size: 3em;
+	margin-top: 0.5em;
+}
+
+#expText {
+	position: absolute;
+
+	margin: 3em;
+
+	left: 60em;
+	top: 4em;
+
 
 	line-height: 2em;
 }
