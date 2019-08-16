@@ -1,72 +1,66 @@
 <html>
 	<head>
-
-	<link rel="stylesheet" type="text/css" href="index.css" media="screen"></link> <!-- Access style sheet for screens larger than STILLDECIDING -->
-	<script src="jquery-3.3.1.min.js"></script> <!-- Import jQuery library -->
-	<script src="index.js"></script> <!-- Import js file that includes jQuery code -->
-
-
-	<title>Brian's Website</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set the viewport for the screen -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="index.css" media="screen"></link> <!-- Access style sheet for screens larger than STILLDECIDING -->
+		<script src="jquery-3.3.1.min.js"></script> <!-- Import jQuery library -->
+		<script src="index.js"></script> <!-- Import js file that includes jQuery code -->
+		<title>Brian's Website</title>
 	</head>
 
 	<body>
-		<div id="backgrounds">
-			<img id ="bg1" src="websitebg1.jpg">
-<!-- 			<img id ="bg2" src="linkTest.jpg">
-			<img id ="bg3" src="educationTest.jpg">
-			<img id ="bg4" src="expTest.jpg"> -->
+		<div id="topBar">
+			<header id="nameHeader">
+				Brian Figueroa
+			</header>
+			<div id="belowNameHeader">
+				C.S Undergraduate and Aspiring Software Engineer
+			</div>
+			<div id="contactInfo">
+				Email: brianfigueroa001@gmail.com <br>
+				Phone Number: (786) - 399 - 5183
+			</div>
+			
+			<div id="navigationIcons">
+				<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+				<path d="M22 11.414v12.586h-20v-12.586l-1.293 1.293-.707-.707 12-12 12 12-.707.707-1.293-1.293zm-6 11.586h5v-12.586l-9-9-9 9v12.586h5v-9h8v9zm-1-7.889h-6v7.778h6v-7.778z"/>
+				</svg>
+			</div>
 		</div>
-
+			
 		<div id="homeSection">
-
 			<img id="homePic" src="brianfigpic.jpg">
-
 			<div id="homeText">
-				<header id="homeWelcomeBanner">
-					Brian Figueroa
-				</header>
-
-				<div id="homeContactInfo">
-					Email: brianfigueroa001@gmail.com <br>
-					Phone Number: (786) - 399 - 5183
-				</div>
-
 				<header id="homeAbout">
 					About
 				</header>
 				
-				<div="homeAboutText">
+				<div id="homeAboutText">
 				I'm student at Florida International University and an aspiring Software Engineer.
 				Currently, I'm learning more about JavaScript and other web-based frameworks and libraries. I will also be learning C and multi-thread programming in this coming semester.
 				</div>
-				
-				<header id="homeSkills">
-					Skills<br><br>
-				</header>
 
 				<div id="homeTechSkills">
 					Technical Skills
-
 					<ul>
 						<li>Java (Proficient)</li>
-						<li>C++</li>
 						<li>JavaScript</li>
 						<li>JQuery</li>
 						<li>Html5</li>
 						<li>CSS</li>
-						<li>Version Control: Git</li>
+						<li>C++</li>
+						<li>Version Control - Git</li>
 					</ul>	
 				</div>
 
 				<div id="homeSoftSkills">
-					Soft Skills
+					Other Skills
 
 					<ul>
-						<li>Organizational and communication skills</li>
-						<li>Adaptability and willingness to adjust</li>
-						<li>Bilangual (English and Spanish)</li>
+						<li>Bilangual
+							<br>&nbsp English (Verbal, Written)
+							<br>&nbsp Spanish (Verbal)
+						</li>
+						<li></li>
 					</ul>
 				</div>
 
@@ -85,10 +79,8 @@
 					Online Calculator (WIP)
 				</header>
 
-				I created a simple arithmetic calculator for users to use. They can type
-				an expression in in-fix notation. and it will convert it into post-fix notation, compute it, and display the result.<br><br>
-
-				This was done by using JavaScript, CSS, and HTML5 as my frontend, and using Java as backend. My Java program takes the user's typed expression through JSON and returns the computed result to display.
+				I created a simple arithmetic calculator webpage for users to use. They can type
+				an expression in in-fix notation. and it will convert it into post-fix notation, compute it, and display the result.
 			</div>
 
 
@@ -97,15 +89,36 @@
 				<header id="projGolemHeader">
 					Golemization Text Converter<br>
 				</header>
-
+				My first JavaScript, CSS, and HTML5 website! It reads user input and converts it to robot speech. 
+				It integrates JavaScript's Web Speech API to read the text out loud. 
+				Click on the picture to check it out! <br><br>
 				<img id="projGolemPic" src="projgolem.jpg">
-
-				<br><br><br><br><br><br><br><br><br> 
-				My first JavaScript, CSS, and HTML5 website! It reads user input and converts it to robot speech. It integrates JavaScript's Web Speech API to read the text out loud. Click on the picture to check it out!
-				
 			</div>
 		</div>
-			
+
+		<div id="expSection">
+			<div id="expHeader">
+				Work Experience
+			</div>
+
+
+			<div id="expText">
+					<header id="codeExplorer">
+						Code Explorers Internship
+					</header>
+
+					<img id="codeExplorersPic" src="CodeExplorers.png">
+
+					I was given the opportunity to teach kids from ages 13 and below about 4th generation technology and basic programming for the summer of 2019. 
+					Some of the subjects taught include mobile and 3D game development, Minecraft Artificial Intelligence, and Virtual and Augmuented reality. <br><br>
+
+					While most of the coding consisted of block programming, I was able to give my students a headstart on understanding core concepts such as variables, functions, 
+					conditional logic, object-oriented programming principles, and even a little bit of data structures.<br><br>
+
+					Check out their website: <a href="https://www.codeexplorers.org/">www.codeexplorers.org</a>
+			</div>
+		</div>
+		
 		<div id="eduSection">
 			<header id="eduHeader">
 				Education
@@ -139,30 +152,6 @@
 				Introduction to Programming (Fall 2018)<br>
 				Programming I<br>
 
-			</div>
-
-		</div>
-
-		<div id="expSection">
-			<div id="expHeader">
-				Work Experience
-			</div>
-
-
-			<div id="expText">
-					<header id="codeExplorer">
-						Code Explorers Internship
-					</header>
-
-					<img id="codeExplorersPic" src="CodeExplorers.png">
-
-					I was given the opportunity to teach kids from ages 13 and below about 4th generation technology and basic programming for the summer of 2019. 
-					Some of the subjects taught include mobile and 3D game development, Minecraft Artificial Intelligence, and Virtual and Augmuented reality. <br><br>
-
-					While most of the coding consisted of block programming, I was able to give my students a headstart on understanding core concepts such as variables, functions, 
-					conditional logic, object-oriented programming principles, and even a little bit of data structures.<br><br>
-
-					Check out their website: <a href="https://www.codeexplorers.org/">www.codeexplorers.org</a>
 			</div>
 		</div>
 	</body>

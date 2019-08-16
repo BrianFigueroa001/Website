@@ -3,13 +3,13 @@ $(document).ready(function() {
 
 	$("#projGolemPic").hover(function() {
 		$(this).animate({
-			width: '15.7em',
-			height: '15.7em',
+			width: '13.3em',
+			height: '13.3em',
 		}, 0.3);
 	}, function() {
 		$(this).animate({
-			width: '15em',
-			height: '15em',
+			width: '13em',
+			height: '13em',
 		}, 0.3);
 	});
 
