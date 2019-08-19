@@ -45,21 +45,53 @@ a {
 #contactInfo {
 	position: absolute;
 	font-weight: normal;
-	font-size: 1.2em;
-	top: 0.4em;
-	left: 28em;
+	font-size: 1.0em;
+	top: 0.8em;
+	left: 30em;
 	margin-top: 1em;
 	margin-bottom: 3em;
 }
 
 #navigationIcons {
 	position: absolute;
-	/*background: green;*/
+	width: 40em;
+	height: 8em;
+	left: 54%;
 }
 
+#homeIcon 
+{
+	position: absolute;
+	font-size: 2em;
+	top: 0.2em;
+	left:0em;
+}
+
+#projIcon{
+	position: absolute;
+	font-size: 2em;
+	top: 0.2em;
+	left: 2em;
+}
+
+#expIcon
+{
+	position: absolute;
+	font-size: 2em;
+	top: 0.2em;
+	left: 4em;
+}
+
+#eduIcon
+{
+	position: absolute;
+	font-size: 2em;
+	top: 0.2em;
+	left: 6em;
+}
 /*This is where information is displayed ot the user*/
 #homeSection, #projSection, #eduSection, #expSection {
-	position: relative;
+	position: absolute;
 	margin-bottom: 5em;
 	left: 0em;
 	width: 100%;
@@ -70,6 +102,13 @@ a {
 	overflow: auto;
 }
 
+#homeSection {
+	z-index: 1;
+}
+#projSection, #eduSection, #expSection
+{
+	z-index: -1
+}
 /*HOME SECTION*/
 
 #homePic {
@@ -133,16 +172,26 @@ a {
 #projTextSummer {
 	position: absolute;
 	margin: 2em;
-	width: 20em;
+	width: 27em;
 	left: 20em;
 	top: 0em;
 	line-height: 2em;
 }
 
+#CalcPic {
+	cursor: pointer;
+	position: absolute;
+	margin: auto;
+	top:18em;
+	left: 5.7em;
+	height: 13em;
+	width: 13em;
+	box-shadow: 0em 0em 10px grey;
+}
 #projTextGolem {
 	position: absolute;
 	margin: 2em;
-	left: 60em;
+	left: 59.5em;
 	top: 0em;
 	width: 27em;
 	line-height: 2em;
@@ -155,7 +204,7 @@ a {
 #projGolemPic{
 	cursor: pointer;
 	position: absolute;
-	margin: 0auto;
+	margin: auto;
 	left: 7em;
 	height: 13em;
 	width: 13em;
