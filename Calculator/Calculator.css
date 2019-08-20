@@ -1,0 +1,124 @@
+body 
+{
+	text-align: center;
+	background-color: gray;
+
+	font-family: "Lucida Console";
+	font-weight: normal;
+	margin: auto;
+	padding: auto;
+}
+
+input[type=text] 
+{
+	background-color: black;
+	color: #168798;
+	font-family: "Lucida Console";
+	font-weight: normal;
+	width: 50em;
+	border: 4px solid #A9AE2E;
+	border-radius: 5px;
+	padding: 12px 20px;
+}
+
+input[type=textDisplay] 
+{
+	background-color: black;
+	color: #168798;
+	font-family: "Lucida Console";
+	
+	font-weight: normal;
+
+	width: 2em;
+	border: 4px solid #A9AE2E;
+	border-radius: 5px;
+	padding: 12px 20px;
+}
+
+#header 
+{
+
+	color: white;
+	line-height: 200%;
+	font-size: 60;
+
+}
+
+
+#userInstruction 
+{
+
+	color: white;
+	line-height: 150%;
+	font-size: 30;
+	
+}
+
+#inputHeader, #outputHeader{
+	color: white;
+}
+#textbox
+{
+	margin-top: 1em;
+}
+#userOutput 
+{
+	margin: auto;
+	background-color: black;
+	color: #168798;
+	font-family: "Lucida Console";
+	font-weight: normal;
+	font-size: 2em;
+	width: 20em;
+	height: 2em;
+	border: 4px solid #A9AE2E;
+	border-radius: 5px;
+	padding: 12px 20px;
+
+}
+
+#examples {
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	background-color: black;
+	color: #168798;
+	font-family: "Lucida Console";
+	font-weight: normal;
+	width: 10em;
+	border: 4px solid #A9AE2E;
+	border-radius: 5px;
+	padding: 12px 20px;
+}
+
+#operatorHelp 
+{
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	background-color: black;
+	color: #168798;
+	font-family: "Lucida Console";
+	font-weight: normal;
+	width: 15em;
+	border: 4px solid #A9AE2E;
+	border-radius: 5px;
+	padding: 12px 20px;
+}
+
+#lastCall 
+{
+	margin: auto;
+	background-color: black;
+	color: #168798;
+	font-family: "Lucida Console";
+	font-weight: normal;
+	width: 100px;
+	
+	border: 4px solid #A9AE2E;
+	border-radius: 5px;
+	padding: 12px 20px;
+}
+
+
+

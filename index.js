@@ -45,7 +45,7 @@ $(document).ready(function() {
 	});
 
 	$("#CalcPic").click(function(){
-		window.location.href= "\GolemTextConverter/GolemTextConverter.html";	
+		window.location.href= "\Calculator/Calculator.html";	
 	});	
 });
 

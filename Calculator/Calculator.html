@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="Calculator.css" media="screen"></link>
+		<script src = "Calculator.js"></script>
+
+
+		<title>Brian's Calculator</title>
+
+	</head>
+
+	<body>
+
+	<div id = "mainContent">
+		<div id="header">
+			CALCULATOR
+		</div>
+
+		<div id="userInstruction">
+			<b>Instruction</b><br>
+			Type a valid expression in infix notation.<br>
+			Use spaces to seperate operands and operators.<br>
+		</div>
+
+		<div id="examples">
+					<b>Valid examples</b> <br><br>
+					2 + 2 <br><br>
+					(2 + 2) * 2 <br><br>
+					2 + (2 * 3 / 2)
+		</div>
+
+		<div id="operatorHelp">
+			<b>Supported Operators</b> <br>
+				+ = Addition <br><br>
+				- = Subtraction<br><br>
+				* = Multiplication<br><br>
+				/ = Division
+		</div>
+		
+		<div id = "textbox">
+			<form>
+				<div>
+				<text id="inputHeader">INPUT<br><br></text>
+					<input type="text" id="userInput" onKeydown = "javascript: if (event.keyCode==13) handleKeyPress(event);"><br><br>
+				</div>
+			</form>
+		</div>
+
+
+		<text id="outputHeader">OUTPUT<br><br></text>
+
+		<!-- Output displayed here -->
+		<div id="userOutput"></div>
+
+		<br>
+
+	</div>
+
+
+	</body>
+
+</html>

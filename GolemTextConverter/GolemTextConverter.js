@@ -6,7 +6,7 @@ $(document).ready(function(){
 	//Start displaying contents
 	$("#mainContent").delay("fast").fadeIn();
 	$("#N21").delay("slow").fadeIn();
-	$("#N21").animate({left: '10%'});
+	$("#N21").animate({left: '5%'});
 });
 
 //Traces previous user inputs
