@@ -144,7 +144,7 @@ class InfixToPostfix
 				 the operator that's on top of the stack.
 				 */
 				if (this.stack.length === 0 || this.stack[this.stack.length - 1] === '('
-					|| precedence(exprChar) > precedence(this.stack[this.stack.length - 1])) 
+					|| this.precedence(exprChar) > this.precedence(this.stack[this.stack.length - 1])) 
 				{
 					//Push it into the stack
 					this.stack.push(exprChar);
@@ -159,7 +159,7 @@ class InfixToPostfix
 				else 
 				{
 					while (this.stack.length > 0 && this.stack[this.stack.length - 1] !== '('
-						  && precedence(exprChar) <= precedence(this.stack[this.stack.length - 1])) 
+						  && this.precedence(exprChar) <= this.precedence(this.stack[this.stack.length - 1])) 
 					{
 						postExpr += this.stack.pop() + ' ';
 					}
@@ -190,22 +190,20 @@ class InfixToPostfix
 		return postExpr;
 	 }
 		
+	//Utility function for method convertToPostFix. Return precedence of the operator
+	precedence(exprChar)
+	{
+		if (exprChar === '+' || exprChar === '-')
+		{
+			return 1;
+		}
+		else 
+		{
+			return 2;
+		}
+	}
 
 }
-
-//Utility function for method convertToPostFix. Return precedence of the operator
-function precedence(exprChar)
-{
-	if (exprChar === '+' || exprChar === '-')
-	{
-		return 1;
-	}
-	else 
-	{
-		return 2;
-	}
-}
-
 
 function handleKeyPress(event)
 {
