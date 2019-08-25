@@ -79,8 +79,8 @@ input[type=textDisplay]
 
 #examples {
 	position: absolute;
-	top: 50%;
-	right: 0%;
+	top: 30%;
+	right: 5%;
 	background-color: black;
 	color: #168798;
 	font-family: "Lucida Console";
@@ -94,8 +94,8 @@ input[type=textDisplay]
 #operatorHelp 
 {
 	position: absolute;
-	top: 50%;
-	left: 0%;
+	top: 30%;
+	left: 5%;
 	background-color: black;
 	color: #168798;
 	font-family: "Lucida Console";
@@ -106,19 +106,6 @@ input[type=textDisplay]
 	padding: 12px 20px;
 }
 
-#lastCall 
-{
-	margin: auto;
-	background-color: black;
-	color: #168798;
-	font-family: "Lucida Console";
-	font-weight: normal;
-	width: 100px;
-	
-	border: 4px solid #A9AE2E;
-	border-radius: 5px;
-	padding: 12px 20px;
-}
 
 
 

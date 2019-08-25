@@ -60,22 +60,20 @@ class Calculator
 		}
 		
 		//pop the result (which should be the only element in the stack by now) and output it.
-		return stack.pop();
+		let finalResult = stack.pop();
+
+		return finalResult;
+		//return stack.pop();
 	}
 
 }
 
 class InfixToPostfix
 {	
-	constructor()
-	{
-		//Used to store parenthesis and operators
-		this.stack = [];
-	}
-	
 	//Converts an expression from infix notation to postfix.
 	convertToPostFix(inExpr)
 	{
+		let stack = [];
 		//Array containing the substrings of the expression excluding spaces.
 		let exprArr = inExpr;
 		//Store the expression in postfix notation.
@@ -95,7 +93,7 @@ class InfixToPostfix
 				continue;
 			}
 			//If it is a digit
-			else if (isNaN(exprChar) === false)
+			else if (!isNaN(exprChar))
 			{
 				//Append the digit to the string.
 				postExpr += exprChar;
@@ -118,19 +116,19 @@ class InfixToPostfix
 				//Push all left paranthesis into the stack
 				if (exprChar === '(') 
 				{
-					this.stack.push(exprChar);
+					stack.push(exprChar);
 				}
 				//exprChar == ')'. Pop all elements from the stack until a '(' is found
 				else
 				{
 					//Append everything from the stack before a '(' is found.
-					while (this.stack.length > 0 && this.stack[this.stack.length - 1] !== '(') 
+					while (stack.length > 0 && stack[stack.length - 1] !== '(') 
 					{
-						postExpr += this.stack.pop() + ' ';
+						postExpr += stack.pop() + ' ';
 					}
 						
 					//Discard the '('
-					this.stack.pop();
+					stack.pop();
 				}
 			}
 			//If the scanned string is an operator
@@ -143,11 +141,11 @@ class InfixToPostfix
 				 - If the scanned operator's precedence is greater than
 				 the operator that's on top of the stack.
 				 */
-				if (this.stack.length === 0 || this.stack[this.stack.length - 1] === '('
-					|| this.precedence(exprChar) > this.precedence(this.stack[this.stack.length - 1])) 
+				if (stack.length === 0 || stack[stack.length - 1] === '('
+					|| this.precedence(exprChar) > this.precedence(stack[stack.length - 1])) 
 				{
 					//Push it into the stack
-					this.stack.push(exprChar);
+					stack.push(exprChar);
 				} 
 				/*
 				Pop and append all operators from the stack that have
@@ -158,35 +156,32 @@ class InfixToPostfix
 				*/
 				else 
 				{
-					while (this.stack.length > 0 && this.stack[this.stack.length - 1] !== '('
-						  && this.precedence(exprChar) <= this.precedence(this.stack[this.stack.length - 1])) 
+					while (stack.length > 0 && stack[stack.length - 1] !== '('
+						  && this.precedence(exprChar) <= this.precedence(stack[stack.length - 1])) 
 					{
-						postExpr += this.stack.pop() + ' ';
+						postExpr += stack.pop() + ' ';
 					}
 
 						//Push this character into the stack.
-						this.stack.push(exprChar);
+						stack.push(exprChar);
 				}
 			}
 			//Invalid character found
 			else
 			{
-				return 'Invalid_expression.';
+				return 'Invalid Expression.';
 			}
 		}
 					
-		while (this.stack.length > 0)
+		//Pop the rest of the stack and append them into the string
+		while (stack.length > 0)
 		{
-			if (this.stack.length - 1 > 0)
-			{
-				postExpr += this.stack.pop() + ' ';
-			}
-			else
-			{
-				postExpr += this.stack.pop();
-			}
+			postExpr += stack.pop() + ' ';
 		}
 	
+		//Remove the space at the end of the string.
+		postExpr = postExpr.substring(0, postExpr.length - 1);
+		
 		return postExpr;
 	 }
 		
