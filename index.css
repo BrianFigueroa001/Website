@@ -1,13 +1,16 @@
-body {
+body 
+{
    background: black;
 }	
 
-div {
+div 
+{
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 }
 
-header {
+header 
+{
 	margin-top: 2em;
 	margin-bottom: 1em;
 	font-weight: bold;
@@ -44,14 +47,13 @@ a {
 	font-size: 1em;
 	top: 5.7vw;
 	left: 0.3vw;
-	margin-top: 1vw;
+	margin-top: 0.0vw;
 }
 #contactInfo {
 	position: absolute;
 	font-weight: normal;
-	font-size: 1.0em;
-	top: 0.8em;
-	left: 30em;
+	font-size: 1.5em;
+	left: 20em;
 	margin-top: 1em;
 	margin-bottom: 3em;
 }
@@ -63,6 +65,7 @@ a {
 	width: 40em;
 	height: 8em;
 	left: 54%;
+	top: 5%;
 }
 
 #homeIconEle, #projIconEle, #expIconEle, #eduIconEle
@@ -80,10 +83,10 @@ a {
 
 #homeIconText
 {
-		position: absolute;
-		font-size: 1.4em;
-		top: 4em;
-		left: 0.25em;
+	position: absolute;
+	font-size: 1.4em;
+	top: 4em;
+	left: 0.25em;
 }
 
 #projIcon{
@@ -135,7 +138,8 @@ a {
 }
 
 /*This is where the main information is displayed to the user*/
-#homeSection, #projSection, #eduSection, #expSection {
+#homeSection, #projSection, #eduSection, #expSection 
+{
 	position: absolute;
 	left: 0vw;
 	width: 100%;
@@ -145,25 +149,41 @@ a {
 	background-color: #0e2a57;
 }
 
+/*Initially show homeSection and don't display the others. jQuery code will allow user to switch.*/
 #homeSection {
 	display: block;
 }
+
 #projSection, #eduSection, #expSection
 {
 	display: none;
 }
+
+/*Headers that appear on the top-left corner of the blue box*/
+
+#homeHeader, #projHeader, #expHeader, #eduHeader 
+{
+	position: absolute;
+	left: 1vw;
+	font-weight: bold;
+	text-align: left;
+	font-size: 3vw;
+	margin-top: 2vw;
+}
 /*HOME SECTION*/
 
-#homePic {
+#homePic 
+{
 	position: absolute;
-	margin: 3vw;
-	left: 7vw;
-	top: 2.5vw;
-	width: 20vw;
-	box-shadow: 0vm 0vm 10vw grey;
+	left: 15vw;
+	top: 6vw;
+	width: 25vw;
+	height: 25vw;
+	box-shadow: 0vw 0vw 1vw grey;
 }
 
-#homeText {
+#homeText 
+{
 	position: absolute;
 	font-size: 1vw;
 	margin: 0vw;
@@ -173,62 +193,66 @@ a {
 	line-height: 2vm;
 }
 
-#homeAbout, #homeSkills {
+#homeAbout, #homeSkills 
+{
 	font-weight: bold;
 	text-align: center;
 	font-size: 1.1vw;
 }
 
-#homeContactInfo {
-	font-weight: normal;
-	margin-top: 1vw;
-	margin-bottom: 3vw;
-}
-
-#homeSkills {
+#homeSkills 
+{
 	position: absolute;
 	top: 15vw;
 	left: 10vw;
 
 }
-#homeTechSkills {
+
+#homeTechSkills, #homeSoftSkills
+{
 	position: absolute;
 	top: 15vw;
+}
+
+#homeTechSkills
+{
 	left: 3vw;
 }
 
-#homeSoftSkills {
-	position: absolute;
-	top: 15vw;
+#homeSoftSkills
+{
 	left: 20vw;
 }
-/*LINK SECTION*/
 
-#projHeader {
-	position: absolute;
-	left: 1vw;
-	font-weight: bold;
-	text-align: left;
-	font-size: 3vw;
-	margin-top: 2vw;
-}
+/*LINK SECTION*/
 
 #projSummerHeader
 {
 	text-align: center;
 }
 
-#projTextSummer {
+#projTextSummer, #projTextGolem
+{
 	position: absolute;
 	font-size: 1vw;
 	margin: 2vw;
 	width: 27vw;
-	left: 15vw;
 	top: 0vw;
 	line-height: 2vw;
 }
 
-#CalcPic {
+#projTextSummer
+{
+		left: 20vw;
+}
+
+#projTextGolem
+{
+		left: 60vw;
+}
+
+#CalcPic, #projGolemPic
+{
 	cursor: pointer;
 	position: absolute;
 	margin: auto;
@@ -238,43 +262,17 @@ a {
 	width: 27vw;
 	box-shadow: 0vw 0vw 1vw grey;
 }
-#projTextGolem {
-	position: absolute;
-	font-size: 1vw;
-	margin: 2vw;
-	left: 54.5vw;
-	top: 0vw;
-	width: 27vw;
-	line-height: 2vw;
-}
 
-#projGolemHeader {
+
+#projGolemHeader 
+{
 	text-align: left;
-}
-
-#projGolemPic{
-	cursor: pointer;
-	position: absolute;
-	margin: auto;
-	left: 0vw;
-	height: 13vw;
-	width: 27vw;
-	box-shadow: 0vw 0vw 1vw grey;
 }
 
 /*EXPERIENCE SECTION*/
 
-#expHeader {
-	position: absolute;
-	left: 1vw;
-	font-weight: bold;
-	text-align: left;
-	font-size: 3vw;
-	margin-top: 2vw;
-}
-
-
-#expText {
+#expText 
+{
 	position: absolute;
 	font-size: 1vw;
 	margin: 1vw;
@@ -284,10 +282,11 @@ a {
 	line-height: 2vw;
 }
 
-#codeExplorersPic {
+#codeExplorersPic 
+{
 	position: absolute;
 	right: 47vw;
-	top: 4vw;
+	top: 6vw;
 	width: 40vw;
 	height: 20vw;
 	box-shadow: 0vw 0vw 1vw grey;
@@ -295,48 +294,49 @@ a {
 
 /*EDUCATION SECTION*/
 
-#eduHeader {
-	position: absolute;
-	left: 1vw;
-	font-weight: bold;
-	text-align: left;
-	font-size: 3vw;
-	margin-top: 2vw;
-}
-
-#expGradDate, #gradDate {
+#expGradDate, #gradDate 
+{
 	margin-top: 1vw;
 	margin-bottom: 1vw;
 	font-weight: normal;
 	font-size: 1.1vw;
 }
 
-#eduTextBachelor {
+#eduTextBachelor, #eduTextAssociate, #eduTextHonors
+{
 	position: absolute;
 	margin-top: 4vw;
-	right: 40vw;
+	left: 5vw;
 	top: 0vw;
-	width: 40vw;
+	width: 30vw;
 	line-height: 1.5vw;
 	font-size: 1vw;
+	background:G
 }
 
+#eduTextBachelor
+{
+	left: 5vw;
+}
 
-#eduTextBachelorHeader {
+#eduTextAssociate
+{
+	left: 40vw;
+}
+
+#eduTextHonors
+{
+	left: 68vw;
+}
+
+#eduTextBachelorHeader 
+{
 	text-align: left;
 }
 
-#eduTextAssociate {
-	position: absolute;
-	margin-top: 4vw;
-	left: 60vw;
-	top: 0vw;
-	width: 25vw;
-	line-height: 1.5vw;
-	font-size: 1vw;
-}
 
-#eduTextAssociateHeader {
+#eduTextAssociateHeader 
+{
 	text-align: left;
 }
 
