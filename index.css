@@ -23,7 +23,7 @@ a {
 #topBar {
 	position: relative;
 	width: 100%;
-	height: 9em;
+	height: 9vw;
 }
 
 /*HEADER: Brian Figueroa, contact info*/
@@ -32,17 +32,19 @@ a {
 	position: absolute;
 	font-weight: bold;
 	font-size: 4em;
-	left: 0.3em;
-	margin-top: 0em;
+	width: 50%;
+	max-width: 100%;
+	left: 0.3vw;
+	top: 0vw;
 }
 
 #belowNameHeader {
 	position: absolute;
 	font-weight: bold;
 	font-size: 1em;
-	top: 5.7em;
-	left: 1.5em;
-	margin-top: 0em;
+	top: 5.7vw;
+	left: 0.3vw;
+	margin-top: 1vw;
 }
 #contactInfo {
 	position: absolute;
@@ -157,6 +159,7 @@ a {
 	margin: 3vw;
 	left: 7vw;
 	top: 2.5vw;
+	width: 20vw;
 	box-shadow: 0vm 0vm 10vw grey;
 }
 
