@@ -34,9 +34,8 @@ a {
 #nameHeader {
 	position: absolute;
 	font-weight: bold;
-	font-size: 4em;
-	width: 50%;
-	max-width: 100%;
+	font-size: 4vw;
+	width: 50vw;
 	left: 0.3vw;
 	top: 0vw;
 }
@@ -44,26 +43,27 @@ a {
 #belowNameHeader {
 	position: absolute;
 	font-weight: bold;
-	font-size: 1em;
-	top: 5.7vw;
-	left: 0.3vw;
+	font-size: 1.15vw;
+	top: 5.5vw;
+	left: 0.1vw;
 	margin-top: 0.0vw;
 }
 #contactInfo {
 	position: absolute;
 	font-weight: normal;
-	font-size: 1.5em;
-	left: 20em;
-	margin-top: 1em;
-	margin-bottom: 3em;
+	font-size: 1vw;
+	top: 1vw;
+	left: 30vw;
+	margin-top: 1vw;
+	margin-bottom: 3vw;
 }
 
 /*Navigation bar on the top-right corner of the screen*/
 
 #navigationIcons {
 	position: absolute;
-	width: 40em;
-	height: 8em;
+	width: 40vw;
+	height: 8vw;
 	left: 54%;
 	top: 5%;
 }
@@ -73,68 +73,60 @@ a {
 	cursor: pointer;
 }
 
+#homeIcon, #projIcon, #expIcon, #eduIcon
+{
+	position: absolute;
+	font-size: 5vw;
+	top: 0.0vw;
+	left: 0vw;
+}
+
+#homeIconText, #projIconText, #expIconText, #eduIconText
+{
+	position: absolute;
+	font-size: 1.5vw;
+	top: 5.5vw;
+}
+
 #homeIcon
 {
-	position: absolute;
-	font-size: 2em;
-	top: 0.2em;
-	left:0em;
+	left: 0vw;
 }
 
-#homeIconText
+#homeIconText 
 {
-	position: absolute;
-	font-size: 1.4em;
-	top: 4em;
-	left: 0.25em;
+	left: 0.70vw;
 }
 
-#projIcon{
-	position: absolute;
-	font-size: 2em;
-	top: 0.2em;
-	left: 2em;
+#projIcon
+{
+	left: 6vw;
 }
 
 #projIconText
 {
-		position: absolute;
-		font-size: 1.4em;
-		top: 4em;
-		left: 7.7em;
+
+	left: 10.7vw;
 }
 
 #expIcon
 {
-	position: absolute;
-	font-size: 2em;
-	top: 0.2em;
-	left: 4em;
+	left: 11.34vw;
 }
 
 #expIconText
 {
-		position: absolute;
-		font-size: 1.4em;
-		top: 4em;
-		left: 16.1em;
-		
+	left: 21.30vw;
 }
 
 #eduIcon
 {
-	position: absolute;
-	font-size: 2em;
-	top: 0.2em;
-	left: 6em;
+	left: 17.5vw;
 }
 
 #eduIconText
 {
-		position: absolute;
-		font-size: 1.4em;
-		top: 4em;
-		left: 24.8em;
+	left: 34vw;
 }
 
 /*This is where the main information is displayed to the user*/
@@ -197,7 +189,7 @@ a {
 {
 	font-weight: bold;
 	text-align: center;
-	font-size: 1.1vw;
+	font-size: 2vw;
 }
 
 #homeSkills 
@@ -211,7 +203,7 @@ a {
 #homeTechSkills, #homeSoftSkills
 {
 	position: absolute;
-	top: 15vw;
+	top: 16vw;
 }
 
 #homeTechSkills

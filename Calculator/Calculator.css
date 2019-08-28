@@ -15,9 +15,9 @@ input[type=text]
 	color: #00a6ff;
 	font-family: "Lucida Console";
 	font-weight: normal;
-	width: 50em;
-	border: 4px solid white;
-	border-radius: 5px;
+	width: 50vw;
+	border: 0.2vw solid white;
+	border-radius: 1vw;
 	padding: 12px 20px;
 }
 
@@ -29,7 +29,7 @@ input[type=textDisplay]
 	
 	font-weight: normal;
 
-	width: 2em;
+	width: 3vw;
 	border: 4px solid white;
 	border-radius: 5px;
 	padding: 12px 20px;
@@ -39,7 +39,7 @@ input[type=textDisplay]
 {
 	color: white;
 	line-height: 200%;
-	font-size: 60;
+	font-size: 5vw;
 
 }
 
@@ -49,8 +49,7 @@ input[type=textDisplay]
 
 	color: white;
 	line-height: 150%;
-	font-size: 30;
-	
+	font-size: 2vw;
 }
 
 #inputHeader, #outputHeader{
@@ -68,42 +67,38 @@ input[type=textDisplay]
 	font-family: "Lucida Console";
 	font-weight: normal;
 	font-size: 2em;
-	width: 20em;
-	height: 2em;
-	border: 4px solid white;
-	border-radius: 5px;
-	padding: 12px 20px;
+	width: 40vw;
+	height: 4vw;
+	border: 0.1vw solid white;
+	border-radius: 1vw;
+	padding: 1vw 1vw;
 
 }
 
-#examples {
+#examples, #operatorHelp {
 	position: absolute;
-	top: 30%;
-	right: 5%;
+	top: 40%;
 	background-color: black;
 	color: #00a6ff;
 	font-family: "Lucida Console";
 	font-weight: normal;
-	width: 10em;
-	border: 4px solid white;
-	border-radius: 5px;
-	padding: 12px 20px;
+	overflow: auto;
+	width: 15vw;
+	border: 0.1vw solid white;
+	border-radius: 5vw;
+	padding: 2vw 2vw;
 }
 
-#operatorHelp 
+#examples
 {
-	position: absolute;
-	top: 30%;
-	left: 5%;
-	background-color: black;
-	color: #00a6ff;
-	font-family: "Lucida Console";
-	font-weight: normal;
-	width: 15em;
-	border: 4px solid white;
-	border-radius: 5px;
-	padding: 12px 20px;
+	right: 3%;
 }
+
+#operatorHelp
+{
+	left: 3%;
+}
+
 
 
 
