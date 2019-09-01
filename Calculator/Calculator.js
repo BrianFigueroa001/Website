@@ -243,7 +243,6 @@ function handleKeyPress(event)
 	let converter = new InfixToPostfix();
 
 	let postfixInput = converter.convertToPostFix(infixInput);
-	alert(postfixInput);
 	let result = calculator.evaluate(postfixInput);
 	
 	document.getElementById("userOutput").innerHTML = result;
