@@ -159,7 +159,7 @@ a {
 	left: 1vw;
 	font-weight: bold;
 	text-align: left;
-	font-size: 3vw;
+	font-size: 5vw;
 	margin-top: 2vw;
 }
 /*HOME SECTION*/
@@ -167,8 +167,8 @@ a {
 #homePic 
 {
 	position: absolute;
-	left: 15vw;
-	top: 6vw;
+	left: 17vw;
+	top: 8vw;
 	width: 25vw;
 	height: 25vw;
 	box-shadow: 0vw 0vw 1vw grey;
@@ -177,10 +177,10 @@ a {
 #homeText 
 {
 	position: absolute;
-	font-size: 1vw;
+	font-size: 1.3vw;
 	margin: 0vw;
 	left: 45vw;
-	width: 40vw;
+	width: 50vw;
 	top: 2vw;
 	line-height: 2vm;
 }
@@ -226,9 +226,9 @@ a {
 #projTextSummer, #projTextGolem
 {
 	position: absolute;
-	font-size: 1vw;
+	font-size: 1.2vw;
 	margin: 2vw;
-	width: 27vw;
+	width: 33vw;
 	top: 0vw;
 	line-height: 2vw;
 }
@@ -248,8 +248,8 @@ a {
 	cursor: pointer;
 	position: absolute;
 	margin: auto;
-	left: 0vw;
-	top: 18vw;
+	left: 2vw;
+	top: 20vw;
 	height: 13vw;
 	width: 27vw;
 	box-shadow: 0vw 0vw 1vw grey;
@@ -259,6 +259,7 @@ a {
 #projGolemHeader 
 {
 	text-align: left;
+	line-height: 2.5vw;
 }
 
 /*EXPERIENCE SECTION*/
@@ -266,10 +267,10 @@ a {
 #expText 
 {
 	position: absolute;
-	font-size: 1vw;
+	font-size: 1.25vw;
 	margin: 1vw;
 	width: 40vw;
-	left: 50vw;
+	left: 54vw;
 	top: 2vw;
 	line-height: 2vw;
 }
@@ -278,10 +279,10 @@ a {
 {
 	position: absolute;
 	right: 47vw;
-	top: 6vw;
+	top: 8vw;
 	width: 40vw;
 	height: 20vw;
-	box-shadow: 0vw 0vw 1vw grey;
+	box-shadow: 0vw 0vw 0.5vw grey;
 }
 
 /*EDUCATION SECTION*/
@@ -297,13 +298,12 @@ a {
 #eduTextBachelor, #eduTextAssociate, #eduTextHonors
 {
 	position: absolute;
-	margin-top: 4vw;
+	margin-top: 5vw;
 	left: 5vw;
 	top: 0vw;
 	width: 30vw;
-	line-height: 1.5vw;
-	font-size: 1vw;
-	background:G
+	line-height: 2vw;
+	font-size: 1.1vw;
 }
 
 #eduTextBachelor
@@ -313,7 +313,7 @@ a {
 
 #eduTextAssociate
 {
-	left: 40vw;
+	left: 36vw;
 }
 
 #eduTextHonors
