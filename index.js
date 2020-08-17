@@ -1,5 +1,4 @@
 //Used to animate the background
-#gakdhvasjhdasv
 $(document).ready(function() {
 	//Store the current section being displayed;
 	let currentSection = "#homeSection";
