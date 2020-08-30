@@ -1,334 +1,336 @@
-body 
-{
-   background: black;
-}	
-
-div 
-{
-	font-family: 'Open Sans', sans-serif;
-	color: white;
+html {
+    font-size: 10vw;
 }
 
-header 
-{
-	margin-top: 2em;
-	margin-bottom: 1em;
-	font-weight: bold;
-	font-size: 2em;
+body {
+    background: black;
+}
+
+div {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+header {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+li {
+    margin-left: 1em;
+    padding-left: 1em;
 }
 
 /*Style hyperlinks*/
 
 a {
-	color: white;
+    color: white;
 }
+
 /*TOP BAR contains header and navigation bar*/
 #topBar {
-	position: relative;
-	width: 100%;
-	height: 9vw;
+    position: relative;
+    width: 100%;
+    height: 17.5%;
 }
 
 /*HEADER: Brian Figueroa, contact info*/
 
 #nameHeader {
-	position: absolute;
-	font-weight: bold;
-	font-size: 4vw;
-	width: 50vw;
-	left: 0.3vw;
-	top: 0vw;
+    position: absolute;
+    font-weight: bold;
+    font-size: 4vw;
+    text-align: left;
+    width: 50vw;
+    left: 0.0vw;
 }
 
 #belowNameHeader {
-	position: absolute;
-	font-weight: bold;
-	font-size: 1.15vw;
-	top: 5.5vw;
-	left: 0.1vw;
-	margin-top: 0.0vw;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.15vw;
+    top: 5.5vw;
+    left: 0.1vw;
+    margin-top: 0.0vw;
 }
+
 #contactInfo {
-	position: absolute;
-	font-weight: normal;
-	font-size: 1vw;
-	top: 1vw;
-	left: 30vw;
-	margin-top: 1vw;
-	margin-bottom: 3vw;
+    position: absolute;
+    font-weight: normal;
+    font-size: 1vw;
+    top: 1vw;
+    left: 30vw;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
 }
 
 /*Navigation bar on the top-right corner of the screen*/
 
 #navigationIcons {
-	position: absolute;
-	width: 40vw;
-	height: 8vw;
-	left: 54%;
-	top: 5%;
+    position: absolute;
+    width: 40vw;
+    height: 8vw;
+    left: 50vw;
+    top: 0.5vh;
 }
 
-#homeIconEle, #projIconEle, #expIconEle, #eduIconEle
-{
-	cursor: pointer;
+#homeIconEle, #projIconEle, #expIconEle, #eduIconEle {
+    cursor: pointer;
 }
 
-#homeIcon, #projIcon, #expIcon, #eduIcon
-{
-	position: absolute;
-	font-size: 5vw;
-	top: 0.0vw;
-	left: 0vw;
+#homeIcon, #projIcon, #expIcon, #eduIcon {
+    position: absolute;
+    font-size: 5vw;
+    top: 0.0vw;
+    left: 0vw;
 }
 
-#homeIconText, #projIconText, #expIconText, #eduIconText
-{
-	position: absolute;
-	font-size: 1.5vw;
-	top: 5.5vw;
+#homeIconText, #projIconText, #expIconText, #eduIconText {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 5.5vw;
 }
 
-#homeIcon
-{
-	left: 0vw;
+#homeIcon {
+    left: 0vw;
 }
 
-#homeIconText 
-{
-	left: 0.70vw;
+#homeIconText {
+    left: 0.70vw;
 }
 
-#projIcon
-{
-	left: 6vw;
+#projIcon {
+    left: 6vw;
 }
 
-#projIconText
-{
+#projIconText {
 
-	left: 10.7vw;
+    left: 10.7vw;
 }
 
-#expIcon
-{
-	left: 11.34vw;
+#expIcon {
+    left: 11.34vw;
 }
 
-#expIconText
-{
-	left: 21.30vw;
+#expIconText {
+    left: 21.30vw;
 }
 
-#eduIcon
-{
-	left: 17.5vw;
+#eduIcon {
+    left: 17.5vw;
 }
 
-#eduIconText
-{
-	left: 34vw;
+#eduIconText {
+    left: 34vw;
 }
 
 /*This is where the main information is displayed to the user*/
-#homeSection, #projSection, #eduSection, #expSection 
-{
-	position: absolute;
-	left: 0vw;
-	width: 100%;
-	max-width: 100%;
-	height: 78%;
-	line-height: 1.5vw;
-	background-color: #0e2a57;
+#homeSection, #projSection, #eduSection, #expSection {
+    position: relative;
+    width: 100%;
+    height: 77vh;
+    margin-top: 3vh;
+    background-color: #0e2a57;
+    border: solid;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /*Initially show homeSection and don't display the others. jQuery code will allow user to switch.*/
 #homeSection {
-	display: block;
+    display: block;
 }
 
-#projSection, #eduSection, #expSection
-{
-	display: none;
+#projSection, #eduSection, #expSection {
+    display: none;
 }
 
-/*Headers that appear on the top-left corner of the blue box*/
-
-#homeHeader, #projHeader, #expHeader, #eduHeader 
-{
-	position: absolute;
-	left: 1vw;
-	font-weight: bold;
-	text-align: left;
-	font-size: 5vw;
-	margin-top: 2vw;
-}
 /*HOME SECTION*/
 
-#homePic 
-{
-	position: absolute;
-	left: 17vw;
-	top: 8vw;
-	width: 25vw;
-	height: 25vw;
-	box-shadow: 0vw 0vw 1vw grey;
+#homePic {
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+    width: 25vw;
+    height: 25vw;
+    box-shadow: 0vw 0vw 1vw grey;
 }
 
-#homeText 
-{
-	position: absolute;
-	font-size: 1.3vw;
-	margin: 0vw;
-	left: 45vw;
-	width: 50vw;
-	top: 2vw;
-	line-height: 2vm;
+#homeText {
+    position: absolute;
+    font-size: 1.3vw;
+    left: 30vw;
+    margin-top: 1vh;
+    width: 65vw;
+    line-height: 2vm;
 }
 
-#homeAbout, #homeSkills 
-{
-	font-weight: bold;
-	text-align: center;
-	font-size: 2vw;
+#homeTechSkills, #resumeDownload {
+    position: absolute;
+    margin-top: 4vh;
+    top: 16vw;
 }
 
-#homeSkills 
-{
-	position: absolute;
-	top: 15vw;
-	left: 10vw;
-
+#homeTechSkills {
+    left: 0vw;
 }
 
-#homeTechSkills, #homeSoftSkills
-{
-	position: absolute;
-	top: 16vw;
-}
-
-#homeTechSkills
-{
-	left: 3vw;
-}
-
-#homeSoftSkills
-{
-	left: 20vw;
+#resumeDownload {
+    font-size: 2vw;
+    left: 45vw;
 }
 
 /*LINK SECTION*/
 
-#projSummerHeader
-{
-	text-align: center;
+
+#projTextSummer, #projTextGolem {
+    position: absolute;
+    font-size: 1.2vw;
+    text-alignp: center;
+    margin: 5vw;
+    width: 40vw;
+    top: 0vw;
+    line-height: 2vw;
 }
 
-#projTextSummer, #projTextGolem
-{
-	position: absolute;
-	font-size: 1.2vw;
-	margin: 2vw;
-	width: 33vw;
-	top: 0vw;
-	line-height: 2vw;
+#projSummerHeader, #projGolemHeader {
+    text-align: left;
+    line-height: 2.5vw;
 }
 
-#projTextSummer
-{
-		left: 20vw;
+#projTextSummer {
+    left: 7vw;
 }
 
-#projTextGolem
-{
-		left: 60vw;
+#projTextGolem {
+    left: 52vw;
 }
 
-#CalcPic, #projGolemPic
-{
-	cursor: pointer;
-	position: absolute;
-	margin: auto;
-	left: 2vw;
-	top: 20vw;
-	height: 13vw;
-	width: 27vw;
-	box-shadow: 0vw 0vw 1vw grey;
+#CalcPic, #projGolemPic {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    left: 0vw;
+    top: 5vh;
+    height: 13vw;
+    width: 30vw;
+    box-shadow: 0vw 0vw 1vw grey;
 }
 
-
-#projGolemHeader 
-{
-	text-align: left;
-	line-height: 2.5vw;
-}
 
 /*EXPERIENCE SECTION*/
 
-#expText 
-{
-	position: absolute;
-	font-size: 1.25vw;
-	margin: 1vw;
-	width: 40vw;
-	left: 54vw;
-	top: 2vw;
-	line-height: 2vw;
+#zgPic, #codeExplorersPic, #fiuPic {
+    cursor: pointer;
+    position: absolute;
+    right: 47vw;
+    width: 20vw;
+    height: 13vw;
+    margin: 2vw;
+    box-shadow: 0vw 0vw 0.5vw grey;
 }
 
-#codeExplorersPic 
-{
-	position: absolute;
-	right: 47vw;
-	top: 8vw;
-	width: 40vw;
-	height: 20vw;
-	box-shadow: 0vw 0vw 0.5vw grey;
+#zgPic {
+    top: 0vw;
+    left: 15vw;
+}
+
+#codeExplorersPic {
+    left: 28vw;
+    top: 15vw;
+}
+
+#fiuPic {
+    left: 3vw;
+    top: 15vw;
+}
+
+#zgHeader, #codeExplorerHeader, #fiuHeader {
+    font-size: 2vw;
+    line-height: 3vw;
+}
+
+#zgText, #codeExplorersText, #fiuText {
+    position: absolute;
+    font-size: 1.25vw;
+    margin: 1vw;
+    width: 40vw;
+    left: 54vw;
+    top: 2vw;
+    line-height: 2vw;
+}
+
+/*Initially show zgText and don't display the others. jQuery code will allow user to switch.*/
+#zgText {
+    display: block;
+}
+
+#codeExplorersText, #fiuText {
+    display: none;
+}
+
+#zgHeader, #codeExplorerHeader, #fiuHeader {
+    margin-bottom: 2vh;
 }
 
 /*EDUCATION SECTION*/
 
-#expGradDate, #gradDate 
-{
-	margin-top: 1vw;
-	margin-bottom: 1vw;
-	font-weight: normal;
-	font-size: 1.1vw;
+#logoFIU, #logoMDC {
+    position: absolute;
+    left: 5vw;
 }
 
-#eduTextBachelor, #eduTextAssociate, #eduTextHonors
-{
-	position: absolute;
-	margin-top: 5vw;
-	left: 5vw;
-	top: 0vw;
-	width: 30vw;
-	line-height: 2vw;
-	font-size: 1.1vw;
+#logoFIU {
+    top: 4vh;
+    width: 17vw;
+    height: 33vh;
 }
 
-#eduTextBachelor
-{
-	left: 5vw;
+#logoMDC {
+    top: 38vh;
+    width: 17vw;
+    height: 33vh;
 }
 
-#eduTextAssociate
-{
-	left: 36vw;
+#expGradDate, #gradDate {
+    font-weight: normal;
+    font-size: 1.1vw;
 }
 
-#eduTextHonors
-{
-	left: 68vw;
+#eduTextBachelor, #eduTextAssociate, #eduTextHonors {
+    position: absolute;
+    width: 60vw;
+    top: 10vh;
+    font-size: 1.1vw;
+    margin-top: 1vh;
 }
 
-#eduTextBachelorHeader 
-{
-	text-align: left;
+#eduTextBachelor {
+    left: 30vw;
+    width: 50vw;
+
+}
+
+#eduTextAssociate {
+    left: 30vw;
+    width: 50vw;
+    top: 35vh;
+}
+
+#eduTextHonors {
+    left: 65vw;
+    top: 5vw;
+    width: 30vw;
+    text-aligh: left;
+}
+
+#eduTextBachelorHeader {
+    text-align: left;
 }
 
 
-#eduTextAssociateHeader 
-{
-	text-align: left;
+#eduTextAssociateHeader {
+    text-align: left;
 }
 
