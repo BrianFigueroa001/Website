@@ -2,14 +2,16 @@
 $(document).ready(function() {
 	//Store the current section being displayed;
 	let currentSection = "#homeSection";
+	let currentSectionIconColor = "#30DB1A"
 	let currentExpText = "#zgText";
+	let currentExpTestHighlight = "0vw 0vw 3vw #30DB1A"
 
-	$("#homeIconEle").css("color", "#0099ff");
-	$("#zgPic").css("box-shadow", "0vw 0vw 3vw blue");
+	$("#homeIconEle").css("color", currentSectionIconColor);
+	$("#zgPic").css("box-shadow", currentExpTestHighlight);
 
 	//Highlight whichever icon the user has their mouse over.
 	$("#homeIconEle, #projIconEle, #expIconEle, #eduIconEle").click(function(){
-		$(this).css("color", "#0099ff");
+		$(this).css("color", currentSectionIconColor);
 
 		if (!$(this).is( $("#homeIconEle")))
 		{
@@ -63,7 +65,7 @@ $(document).ready(function() {
 
 	//Highlight whichever image the user clicked on in the experience section
 	$("#zgPic, #codeExplorersPic, #fiuPic").click(function(){
-		$(this).css("box-shadow", "0vw 0vw 3vw blue");
+		$(this).css("box-shadow", currentExpTestHighlight);
 
 		if (!$(this).is( $("#zgPic")))
 		{
