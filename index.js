@@ -108,5 +108,15 @@ $(document).ready(function() {
 		}
 	});
 
+	//Links to projects when the image is clicked.
+	$("#projGolemPic").click(function(){
+		window.location.href= "\GolemTextConverter/GolemTextConverter.html";
+	});
+
+	$("#CalcPic").click(function(){
+		window.location.href= "\Calculator/Calculator.html";
+	});
+
+	//Links to
 });
 
