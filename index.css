@@ -184,34 +184,26 @@ a {
 /*LINK SECTION*/
 
 
-#projTextSummer, #projTextGolem {
-    position: absolute;
-    font-size: 1.2vw;
-    text-alignp: center;
+#projTextSummer, #projTextGolem, #projLivestream, #projHenryBooks, #projDebait  {
+    position: relative;
+    font-size: 1.25vw;
+    text-align: left;
     margin: 5vw;
-    width: 40vw;
+    width: 60vw;
     top: 0vw;
-    line-height: 2vw;
+    left: 20vw;
 }
 
-#projSummerHeader, #projGolemHeader {
+#projSummerHeader, #projGolemHeader, #projLivestreamHeader, #projHenryBooksHeader, #projDebaitHeader {
     text-align: left;
     line-height: 2.5vw;
-}
-
-#projTextSummer {
-    left: 7vw;
-}
-
-#projTextGolem {
-    left: 52vw;
 }
 
 #CalcPic, #projGolemPic {
     cursor: pointer;
     position: relative;
     margin: auto;
-    left: 0vw;
+    left: 12vw;
     top: 5vh;
     height: 13vw;
     width: 30vw;
