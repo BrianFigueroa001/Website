@@ -43,22 +43,22 @@ a {
     font-size: 4vw;
     text-align: left;
     width: 50vw;
-    left: 0.0vw;
+    left: 1vw;
 }
 
 #belowNameHeader {
     position: absolute;
     font-weight: bold;
-    font-size: 1.15vw;
-    top: 5.5vw;
-    left: 0.1vw;
-    margin-top: 0.0vw;
+    font-size: 3vw;
+    top: 5vw;
+    left: 1vw;
 }
 
 #contactInfo {
     position: absolute;
     font-weight: normal;
-    font-size: 1vw;
+    font-size: 1.10vw;
+    text-align: left;
     top: 1vw;
     left: 30vw;
     margin-top: 1vw;
@@ -93,36 +93,35 @@ a {
 }
 
 #homeIcon {
-    left: 0vw;
+    left: .55vw;
 }
 
 #homeIconText {
-    left: 0.70vw;
-}
-
-#projIcon {
-    left: 6vw;
-}
-
-#projIconText {
-
-    left: 10.7vw;
+    left: 1.70vw;
 }
 
 #expIcon {
-    left: 11.34vw;
+    left: 6vw;
 }
 
 #expIconText {
-    left: 21.30vw;
+    left: 10.7vw;
+}
+
+#projIcon {
+    left: 12vw;
+}
+
+#projIconText {
+    left: 23vw;
 }
 
 #eduIcon {
-    left: 17.5vw;
+    left: 17vw;
 }
 
 #eduIconText {
-    left: 34vw;
+    left: 33vw;
 }
 
 /*This is where the main information is displayed to the user*/
@@ -169,7 +168,7 @@ a {
 #homeTechSkills, #resumeDownload {
     position: absolute;
     margin-top: 4vh;
-    top: 16vw;
+    top: 14.5vw;
 }
 
 #homeTechSkills {
@@ -178,7 +177,7 @@ a {
 
 #resumeDownload {
     font-size: 2vw;
-    left: 45vw;
+    left: 0vw;
 }
 
 /*LINK SECTION*/
@@ -191,7 +190,7 @@ a {
     margin: 5vw;
     width: 60vw;
     top: 0vw;
-    left: 20vw;
+    left: 0vw;
 }
 
 #projSummerHeader, #projGolemHeader, #projLivestreamHeader, #projHenryBooksHeader, #projDebaitHeader {
